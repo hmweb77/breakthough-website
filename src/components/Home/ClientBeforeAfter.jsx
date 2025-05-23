@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 const clients = [
   {
     name: "João",
-    beforeImg: "/before.png",
-    afterImg: "/after.png",
+    beforeImg: "/manBefore.png",
+    afterImg: "/manAfter.png",
     quote: "I finally feel like myself again — but stronger. The fog is gone.",
   },
   {
     name: "Ania",
-    beforeImg: "/beforeW.png",
-    afterImg: "/afterW.png",
+    beforeImg: "/womanB.png",
+    afterImg: "/womanA.png",
     quote: "My face softened. I looked younger. I felt lighter — and free.",
   },
 ];
