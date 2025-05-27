@@ -110,7 +110,7 @@ const Navbar = () => {
                 boxShadow: "0 10px 25px rgba(68, 112, 135, 0.3)"
               }}
               whileTap={{ scale: 0.98 }}
-              className="hidden lg:inline-flex items-center gap-2 bg-gradient-to-r from-[#447087] to-[#68A1A7] hover:from-[#68A1A7] hover:to-[#50A7AC] text-white text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-lg overflow-hidden relative group"
+              className="hidden lg:inline-flex items-center gap-2 bg-[#50A7AC] text-white text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-lg overflow-hidden relative group"
             >
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"

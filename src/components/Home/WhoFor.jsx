@@ -126,16 +126,16 @@ const WhoIsItFor = () => {
             initial={{ scale: 0, rotate: -180 }}
             whileInView={{ scale: 1, rotate: 0 }}
             transition={{ delay: 0.3, type: "spring", stiffness: 200, damping: 15 }}
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-[#68A1A7]/20 to-[#B0CCC2]/20 backdrop-blur-sm border border-[#68A1A7]/30 rounded-full px-8 py-4 mb-10"
+            className="inline-flex items-center gap-3 bg-[#B0CCC2]/20 backdrop-blur-sm border border-[#68A1A7]/30 rounded-full px-8 py-4 mb-10"
           >
             <Lock className="text-[#447087]" size={22} />
             <span className="text-[#447087] font-bold text-base tracking-wide uppercase">Exclusive Transformation</span>
           </motion.div>
 
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-            <span className="bg-gradient-to-r from-[#2C2C2C] to-[#447087] bg-clip-text text-transparent">
+
               Who Is This Work
-            </span>
+           
             <br />
             <motion.span
               initial={{ opacity: 0, x: -50 }}
@@ -148,7 +148,7 @@ const WhoIsItFor = () => {
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 transition={{ delay: 1.2, duration: 1, ease: "easeOut" }}
-                className="absolute -bottom-3 left-0 right-0 h-2 bg-gradient-to-r from-[#68A1A7] to-[#B0CCC2] rounded-full origin-left opacity-60"
+                className="absolute -bottom-3 left-0 right-0 h-2 bg-[#68A1A7]  rounded-full origin-left opacity-60"
               />
             </motion.span>
           </h1>
@@ -160,7 +160,7 @@ const WhoIsItFor = () => {
             className="max-w-5xl mx-auto"
           >
             <p className="text-2xl sm:text-3xl font-light text-[#2C2C2C]/90 leading-relaxed mb-8">
-              This work is <span className="font-bold text-[#447087]">not for everyone</span>. 
+              This work is <span className="font-bold text-[#68A1A7]">not for everyone</span>. 
               It's for the ones who know — deep down — that 
               <span className="font-bold text-[#68A1A7]"> more is possible</span>.
             </p>
@@ -174,7 +174,7 @@ const WhoIsItFor = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="max-w-6xl mx-auto mb-20"
         >
-          <div className="bg-gradient-to-br from-white/80 to-[#B0CCC2]/10 backdrop-blur-sm rounded-3xl border border-[#B0CCC2]/20 p-12 shadow-xl">
+          <div className="bg-gradient-white/80  backdrop-blur-sm rounded-3xl border border-[#B0CCC2]/20 p-12 shadow-xl">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -207,7 +207,7 @@ const WhoIsItFor = () => {
             transition={{ delay: 0.8, duration: 0.6 }}
             className="text-4xl sm:text-5xl font-bold text-center mb-16 text-[#2C2C2C]"
           >
-            <span className="bg-gradient-to-r from-[#447087] to-[#68A1A7] bg-clip-text text-transparent">
+            <span className="bg-[#68A1A7] bg-clip-text text-transparent">
               Breakthrough Methods
             </span> is for you if:
           </motion.h2>
@@ -286,7 +286,7 @@ const WhoIsItFor = () => {
               <Key className="text-[#68A1A7]" size={48} />
             </motion.div>
             
-            <h3 className="text-4xl sm:text-5xl font-bold mb-8 bg-gradient-to-r from-[#447087] to-[#68A1A7] bg-clip-text text-transparent">
+            <h3 className="text-4xl sm:text-5xl font-bold mb-8 bg-[#68A1A7] bg-clip-text text-transparent">
               This isn't about fixing you.
               <br />
               It's about freeing you.
@@ -349,11 +349,9 @@ const WhoIsItFor = () => {
                 transition: { duration: 0.3 }
               }}
               whileTap={{ scale: 0.98 }}
-              className="group relative inline-flex items-center gap-4 bg-gradient-to-r from-[#447087] to-[#68A1A7] text-white text-2xl font-bold py-6 px-12 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300"
+              className="group relative inline-flex items-center gap-4 bg-[#68A1A7] text-white text-2xl font-bold py-6 px-12 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300"
             >
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-[#68A1A7] to-[#447087] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
+              
               
               <span className="relative z-10">Take the Breakthrough Assessment</span>
               <motion.div
@@ -364,11 +362,7 @@ const WhoIsItFor = () => {
                 <ArrowRight size={28} />
               </motion.div>
               
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent skew-x-12"
-                animate={{ x: [-120, 320] }}
-                transition={{ duration: 2.5, repeat: Infinity, delay: 3 }}
-              />
+              
             </motion.a>
           </motion.div>
 

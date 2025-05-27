@@ -114,16 +114,16 @@ export default function WhatAreBreakthroughMethods() {
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             transition={{ delay: 0.3, type: "spring", stiffness: 200, damping: 20 }}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#68A1A7]/20 to-[#B0CCC2]/20 backdrop-blur-sm border border-[#68A1A7]/20 rounded-full px-6 py-2 mb-8"
+            className="inline-flex items-center gap-2 bg-[#68A1A7]/20  backdrop-blur-sm border border-[#68A1A7]/20 rounded-full px-6 py-2 mb-8"
           >
             <Sparkles className="text-[#68A1A7]" size={18} />
             <span className="text-[#68A1A7] font-medium text-sm tracking-wide uppercase">Revolutionary Transformation</span>
           </motion.div>
           
-          <h2 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-[#2C2C2C] via-[#447087] to-[#68A1A7] bg-clip-text text-transparent">
+          <h2 className="text-6xl sm:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+
               What Are Breakthrough
-            </span>
+        
             <br />
             <motion.span
               initial={{ opacity: 0, x: -20 }}
@@ -142,7 +142,7 @@ export default function WhatAreBreakthroughMethods() {
             className="text-xl lg:text-2xl max-w-4xl mx-auto text-[#2C2C2C]/80 leading-relaxed font-light"
           >
             A revolutionary transformational system that clears internal resistance, 
-            <span className="text-[#447087] font-medium"> activates your true self</span>, and aligns you with the 
+            <span className="text-[#68A1A7] font-medium"> activates your true self</span>, and aligns you with the 
             <span className="text-[#68A1A7] font-medium"> success and freedom</span> you're meant to have.
           </motion.p>
         </motion.div>
@@ -165,8 +165,6 @@ export default function WhatAreBreakthroughMethods() {
               }}
               className="group relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl border border-[#B0CCC2]/20 p-8 text-left overflow-hidden transition-all duration-300"
             >
-              {/* Card background gradient on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#68A1A7]/5 to-[#B0CCC2]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
               
               {/* Pulsing background circle */}
               <motion.div
@@ -180,7 +178,7 @@ export default function WhatAreBreakthroughMethods() {
                 <div className="relative mb-6">
                   {/* Icon background with animated border */}
                   <motion.div
-                    className="relative flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#68A1A7] to-[#447087] rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                    className="relative flex items-center justify-center w-16 h-16 bg-[#68A1A7]  rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300"
                     whileHover={{ rotate: 5, scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   >
@@ -244,7 +242,7 @@ export default function WhatAreBreakthroughMethods() {
               boxShadow: "0 20px 40px rgba(68, 112, 135, 0.3)"
             }}
             whileTap={{ scale: 0.98 }}
-            className="bg-gradient-to-r from-[#447087] to-[#68A1A7] text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-[#447087]/20"
+            className="bg-[#68A1A7] text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-[#447087]/20"
           >
             Discover Your Breakthrough
           </motion.button>

@@ -109,9 +109,9 @@ const ServicesCards = () => {
           <h2 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">
             Choose Your
             <br />
-            <span className="bg-gradient-to-r from-[#50A7AD] to-white bg-clip-text text-transparent">
+
               Breakthrough Journey
-            </span>
+           
           </h2>
           
           <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
@@ -206,7 +206,7 @@ const FlipCard = ({ service, index }) => {
             onClick={flipCard}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="group/btn relative w-full bg-gradient-to-r from-[#417FE5] to-[#50A7AD] hover:from-[#50A7AD] hover:to-[#417FE5] text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden"
+            className="group/btn relative w-full bg-[#68A1A7] text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden"
           >
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"
@@ -286,7 +286,7 @@ const FlipCard = ({ service, index }) => {
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex-1 text-center py-3 px-4 bg-white/80 hover:bg-white text-[#417FE5] hover:text-[#50A7AD] rounded-xl font-medium transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+              className="flex-1 text-center py-3 px-4 bg-[#68A1A7] text-white rounded-xl font-medium transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
             >
               <ArrowRight size={16} className="rotate-180" />
               Back
@@ -295,7 +295,7 @@ const FlipCard = ({ service, index }) => {
               href="#methods"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex-1 text-center py-3 px-4 bg-gradient-to-r from-[#417FE5] to-[#50A7AD] text-white rounded-xl font-medium transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+              className="flex-1 text-center py-3 px-4 bg-gradient-to-r bg-[#68A1A7] text-white rounded-xl font-medium transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
             >
               <ExternalLink size={16} />
               Learn Method
