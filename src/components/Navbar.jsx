@@ -109,7 +109,7 @@ const Navbar = () => {
                 scale: 1.05,
                 boxShadow: "0 10px 25px rgba(68, 112, 135, 0.3)"
               }}
-              whileTap={{ scale: 0.98 }}
+              whileTap={{ scale: 0.98 }}  
               className="hidden lg:inline-flex items-center gap-2 bg-[#50A7AC] text-white text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-lg overflow-hidden relative group"
             >
               <motion.div

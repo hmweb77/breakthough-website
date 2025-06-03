@@ -138,17 +138,12 @@ const WhyItWorks = () => {
             <span className="text-black font-bold text-base tracking-wide uppercase">Proven Science</span>
           </motion.div>
 
-          <h2 className="text-6xl sm:text-7xl lg:text-8xl font-bold mb-10 leading-tight">
+          <h2 className="text-6xl text-[#474747] sm:text-7xl lg:text-8xl font-bold mb-10 leading-tight">
             Why It
             <br />
-            <motion.span
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-[#91C7CB] relative"
-            >
+           
               Works
-            </motion.span>
+          
           </h2>
 
           <motion.p
@@ -278,10 +273,9 @@ const WhyItWorks = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="text-4xl sm:text-5xl font-bold mb-8 text-[#2C2C2C]"
+              className="text-4xl sm:text-5xl font-bold mb-8 text-[#474747]"
             >
-              What This Means for 
-              <span className="text-[#54A4AC]"> You</span>
+              What This Means for You
             </motion.h3>
             
             <motion.div

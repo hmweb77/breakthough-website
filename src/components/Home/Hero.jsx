@@ -103,7 +103,7 @@ export default function HeroSection() {
         <div className="w-full md:w-1/2 text-center md:text-left prose prose-invert mb-8 md:mb-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white my-12 sm:mb-16">
             Set yourself free from <br />
-            <span className="text-[#00BAE5] border-r-2 border-[#00DBFF] pr-1">
+            <span className="text-[#50A7AC] border-r-2 border-[#50A7AC] pr-1">
               {displayText}
             </span>
           </h1>
@@ -122,7 +122,7 @@ export default function HeroSection() {
                 section.scrollIntoView({ behavior: "smooth" });
               }
             }}
-            className="bg-[#00BAE5] text-[#004859] font-semibold mb-4 px-6 py-3 rounded-lg hover:bg-[#0092BF] transition w-full sm:w-auto"
+            className="bg-[#50A7AC] text-white font-semibold mb-4 px-6 py-3 rounded-lg hover:bg-[#0092bfa0] transition w-full sm:w-auto"
           >
             Join the waitlist
           </button>

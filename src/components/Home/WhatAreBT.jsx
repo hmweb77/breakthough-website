@@ -120,19 +120,14 @@ export default function WhatAreBreakthroughMethods() {
             <span className="text-[#68A1A7] font-medium text-sm tracking-wide uppercase">Revolutionary Transformation</span>
           </motion.div>
           
-          <h2 className="text-6xl sm:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+          <h2 className="text-6xl text-[#474747] sm:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
 
               What Are Breakthrough
         
             <br />
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="text-[#68A1A7]"
-            >
+           
               Methods?
-            </motion.span>
+          
           </h2>
           
           <motion.p

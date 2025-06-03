@@ -132,17 +132,17 @@ const WhoIsItFor = () => {
             <span className="text-[#447087] font-bold text-base tracking-wide uppercase">Exclusive Transformation</span>
           </motion.div>
 
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+          <h1 className="text-6xl text-[#474747] sm:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
 
               Who Is This Work
            
             <br />
-            <motion.span
+            {/* <motion.span
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
               className="text-[#68A1A7] relative"
-            >
+            > */}
               Really For?
               <motion.div
                 initial={{ scaleX: 0 }}
@@ -150,7 +150,7 @@ const WhoIsItFor = () => {
                 transition={{ delay: 1.2, duration: 1, ease: "easeOut" }}
                 className="absolute -bottom-3 left-0 right-0 h-2 bg-[#68A1A7]  rounded-full origin-left opacity-60"
               />
-            </motion.span>
+            {/* </motion.span> */}
           </h1>
 
           <motion.div
@@ -205,11 +205,10 @@ const WhoIsItFor = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8, duration: 0.6 }}
-            className="text-4xl sm:text-5xl font-bold text-center mb-16 text-[#2C2C2C]"
+            className="text-4xl sm:text-5xl font-bold text-center mb-16 text-[#474747]"
           >
-            <span className="bg-[#68A1A7] bg-clip-text text-transparent">
-              Breakthrough Methods
-            </span> is for you if:
+           
+              Breakthrough Methods is for you if:
           </motion.h2>
 
           <motion.div
