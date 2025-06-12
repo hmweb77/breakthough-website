@@ -10,12 +10,12 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Who It's For", href: "#who-its-for" },
-    { name: "Why It Works", href: "#why-it-works" },
-    { name: "The Process", href: "#process" },
-    { name: "Work With Me", href: "#work-with-me" },
-    { name: "About", href: "#about" },
+    { name: "Home", href: "/" },
+    { name: "Who It's For", href: "/casestudy" },
+    { name: "Why It Works", href: "/why" },
+    { name: "The Process", href: "/methods" },
+    { name: "Work With Me", href: "/services" },
+    { name: "About", href: "/about" },
   ];
 
   // Handle scroll effect
