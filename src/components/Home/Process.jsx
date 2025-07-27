@@ -112,18 +112,10 @@ const Process = () => {
           transition={{ duration: 1 }}
           className="text-center max-w-4xl mx-auto mb-24"
         >
-          <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            whileInView={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.3, type: "spring", stiffness: 200, damping: 15 }}
-            className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-8 py-4 mb-10"
-          >
-            <MapPin className="text-white" size={22} />
-            <span className="text-white font-bold text-base tracking-wide uppercase">Your Journey</span>
-          </motion.div>
+         
 
           <h2 className="text-6xl sm:text-7xl lg:text-8xl font-bold mb-8 text-white leading-tight">
-            The Breakthrough
+          Your Liberation  
             <br />
             <motion.span
               initial={{ opacity: 0, x: -50 }}
@@ -131,7 +123,7 @@ const Process = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="relative"
             >
-              Roadmap
+              Journey
               <motion.div
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
@@ -147,8 +139,7 @@ const Process = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="text-xl sm:text-2xl text-white/90 leading-relaxed font-light"
           >
-            Our neuroscience-informed method creates lasting transformation by 
-            <span className="font-semibold"> rewiring your mind</span> at the subconscious level.
+            A neuroscience-informed journey from survival to sovereignty - designed to liberate you from internal resistance, reveal the invisible forces shaping your life, and activate the identity, power, and purpose that have always been within you.
           </motion.p>
         </motion.div>
 

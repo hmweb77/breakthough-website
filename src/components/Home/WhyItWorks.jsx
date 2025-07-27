@@ -42,10 +42,10 @@ const reasons = [
 ];
 
 const proofPoints = [
-  { text: "Zero resistance or self-sabotage", icon: CheckCircle2 },
-  { text: "Immediate clarity on next steps", icon: Target },
-  { text: "Natural confidence in decisions", icon: TrendingUp },
-  { text: "Energy aligned with purpose", icon: Zap }
+  { text: "You trust yourself fully -  and stop getting in your own way", icon: CheckCircle2 },
+  { text: "You lead from inner alignment - not from reaction or survival", icon: Target },
+  { text: "Your voice, truth, and presence are fully expressed -  no more holding back", icon: TrendingUp },
+  { text: "You move with vision and purpose - not pressure or fear", icon: Zap }
 ];
 
 const containerVariants = {
@@ -128,21 +128,10 @@ const WhyItWorks = () => {
           transition={{ duration: 1 }}
           className="text-center mb-24"
         >
-          <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            whileInView={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.3, type: "spring", stiffness: 200, damping: 15 }}
-            className="inline-flex items-center gap-3 bg-[#54A4AC]/20 backdrop-blur-sm border border-[#54A4AC]/30 rounded-full px-8 py-4 mb-10"
-          >
-            <Unlock className="text-[#A4D4D4]" size={22} />
-            <span className="text-black font-bold text-base tracking-wide uppercase">Proven Science</span>
-          </motion.div>
+         
 
           <h2 className="text-6xl text-[#474747] sm:text-7xl lg:text-8xl font-bold mb-10 leading-tight">
-            Why It
-            <br />
-           
-              Works
+          What makes them so effective
           
           </h2>
 
@@ -152,10 +141,12 @@ const WhyItWorks = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="text-2xl sm:text-3xl text-[#2C2C2C]/80 max-w-5xl mx-auto leading-relaxed font-light"
           >
-            Breakthrough Methods aren't about adding more tools — they're about 
-            <span className="font-bold text-[#54A4AC]"> removing what no longer serves you</span>, 
-            so your clarity, confidence, and momentum can 
-            <span className="font-bold text-[#54A4AC]"> flow without friction</span>.
+           
+
+
+            <span className="font-bold text-[#54A4AC]"> Breakthrough Methods aren’t about adding or learning more - they’re about clearing what’s in the way and the resistance holding you back. </span>, 
+            They dissolve the inner blocks hidden in your subconscious, so your truth, power, and next level can rise from within. 
+
           </motion.p>
         </motion.div>
 
@@ -275,7 +266,7 @@ const WhyItWorks = () => {
               transition={{ delay: 0.8, duration: 0.6 }}
               className="text-4xl sm:text-5xl font-bold mb-8 text-[#474747]"
             >
-              What This Means for You
+              What Becomes Possible for You
             </motion.h3>
             
             <motion.div
@@ -306,7 +297,10 @@ const WhyItWorks = () => {
               transition={{ delay: 1, duration: 0.6 }}
               className="text-xl text-[#68A1A7] font-medium leading-relaxed"
             >
-              When internal resistance dissolves, everything becomes possible — and easier.
+              This is the freedom on the other side of resistance. 
+              <br/>
+When internal resistance dissolves, everything becomes possible - and easier. 
+
             </motion.p>
           </div>
         </motion.div>

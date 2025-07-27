@@ -5,23 +5,24 @@ import { Sparkles, Brain, Activity } from "lucide-react";
 const methods = [
   {
     icon: Sparkles,
-    title: "Deep Inner Reprogramming",
+    title: "Transform the Resistance",
     description:
-      "Breakthrough Methods work at the subconscious level to dissolve invisible blocks, realign your beliefs, and create sustainable change."
+      "Breakthrough Methods go deep into the subconscious – where your identity, beliefs, and conditioning are shaped – to dissolve the invisible blocks that keep holding you back."
   },
   {
     icon: Brain,
-    title: "Rooted in Neuroscience",
+    title: "Backed by Neuroscience",
     description:
-      "Grounded in NLP and cognitive science, this proven methodology rewires neural pathways to trigger immediate cognitive and emotional shifts."
+      "Grounded in neuroplasticity and NLP, this proven methodology rewires neural pathways in real time, creating rapid, lasting shifts in how you think, feel, and engage with the world."
   },
   {
     icon: Activity,
-    title: "Live, Embodied Results",
+    title: "Embodied Transformation",
     description:
-      "This is more than mindset. It's about transformation you feel — in your body, emotions, and actions — from the first session."
+      "This isn’t mindset work — it’s a full-system recalibration that creates real-time, embodied change. You’ll feel it in your body, emotions, and actions from the very first session."
   }
 ];
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -110,15 +111,7 @@ export default function WhatAreBreakthroughMethods() {
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="mb-16"
         >
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition={{ delay: 0.3, type: "spring", stiffness: 200, damping: 20 }}
-            className="inline-flex items-center gap-2 bg-[#68A1A7]/20  backdrop-blur-sm border border-[#68A1A7]/20 rounded-full px-6 py-2 mb-8"
-          >
-            <Sparkles className="text-[#68A1A7]" size={18} />
-            <span className="text-[#68A1A7] font-medium text-sm tracking-wide uppercase">Revolutionary Transformation</span>
-          </motion.div>
+         
           
           <h2 className="text-6xl text-[#474747] sm:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
 
@@ -131,15 +124,15 @@ export default function WhatAreBreakthroughMethods() {
           </h2>
           
           <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-xl lg:text-2xl max-w-4xl mx-auto text-[#2C2C2C]/80 leading-relaxed font-light"
-          >
-            A revolutionary transformational system that clears internal resistance, 
-            <span className="text-[#68A1A7] font-medium"> activates your true self</span>, and aligns you with the 
-            <span className="text-[#68A1A7] font-medium"> success and freedom</span> you're meant to have.
-          </motion.p>
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ delay: 0.4, duration: 0.8 }}
+  className="text-xl lg:text-2xl max-w-4xl mx-auto text-[#2C2C2C]/80 leading-relaxed font-light"
+>
+  A powerful <span className="font-semibold">transformational technology</span> designed to clear internal resistance, reprogram your subconscious, and 
+  <span className="font-semibold"> activate the success, freedom, and power</span> already within you.
+</motion.p>
+
         </motion.div>
 
         <motion.div

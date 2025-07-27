@@ -17,30 +17,61 @@ import {
 const criteriaItems = [
   {
     icon: Users,
-    text: "You're a high-performing entrepreneur, leader, or visionary who senses there's something deeper driving your results — or holding them back.",
+    text: (
+      <>
+        <span className="font-semibold">High-capacity entrepreneurs, leaders, and visionaries</span> who are ready to get out of their own way – and into their next level of truth, power, and freedom.
+      </>
+    ),
     gradient: "from-[#68A1A7] to-[#B0CCC2]"
   },
   {
     icon: Target,
-    text: "You're standing at a personal or professional crossroads and realize strategy alone won't get you through this one.",
+    text: (
+      <>
+        Those who have outgrown surface-level solutions, and <span className="font-semibold">know that true liberation requires going to the root</span> – beyond mindset, beyond strategy, beyond performance.
+      </>
+    ),
     gradient: "from-[#447087] to-[#68A1A7]"
   },
   {
     icon: Brain,
-    text: "You've outgrown surface-level tools and are ready for deep, lasting transformation.",
+    text: (
+      <>
+        It’s for those <span className="font-semibold">devoted to their evolution</span>, willing to face what’s been silently driving their choices, and ready to <span className="font-semibold">recode their internal operating system from the inside out</span>.
+      </>
+    ),
     gradient: "from-[#B0CCC2] to-[#447087]"
   },
   {
     icon: Heart,
-    text: "You crave inner freedom, clarity, and the ability to fully show up as the most authentic, powerful version of yourself.",
+    text: (
+      <>
+        Breakthrough Methods is designed for those who are ready for <span className="font-semibold">real, lasting transformation</span>.
+      </>
+    ),
     gradient: "from-[#68A1A7] to-[#447087]"
   },
   {
     icon: Zap,
-    text: "You're willing to look within, face what's running the show behind the scenes, and finally shift what no longer serves you.",
+    text: (
+      <>
+        <span className="font-semibold">Those who want to understand themselves on a deeper level, experience true freedom and liberation, and get results quicker than the conventional path allows.</span>
+      </>
+    ),
     gradient: "from-[#447087] to-[#B0CCC2]"
+  },
+  {
+    icon: Sparkles,
+    text: (
+      <>
+        <span className="font-semibold">This work isn’t for dabblers.</span> It’s for those who are ready to <span className="font-semibold">meet themselves fully</span>, clear what no longer serves, and embody the version of themselves that legacy, alignment, and liberation require.
+      </>
+    ),
+    gradient: "from-[#B0CCC2] to-[#68A1A7]"
   }
 ];
+
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -122,53 +153,48 @@ const WhoIsItFor = () => {
           transition={{ duration: 1 }}
           className="text-center mb-20"
         >
-          <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            whileInView={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.3, type: "spring", stiffness: 200, damping: 15 }}
-            className="inline-flex items-center gap-3 bg-[#B0CCC2]/20 backdrop-blur-sm border border-[#68A1A7]/30 rounded-full px-8 py-4 mb-10"
-          >
-            <Lock className="text-[#447087]" size={22} />
-            <span className="text-[#447087] font-bold text-base tracking-wide uppercase">Exclusive Transformation</span>
-          </motion.div>
+          
 
           <h1 className="text-6xl text-[#474747] sm:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
 
-              Who Is This Work
+          Who are Breakthrough Methods
            
-            <br />
-            {/* <motion.span
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-[#68A1A7] relative"
-            > */}
-              Really For?
+           
+              designed for? 
               <motion.div
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 transition={{ delay: 1.2, duration: 1, ease: "easeOut" }}
                 className="absolute -bottom-3 left-0 right-0 h-2 bg-[#68A1A7]  rounded-full origin-left opacity-60"
               />
-            {/* </motion.span> */}
+            
           </h1>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-            className="max-w-5xl mx-auto"
-          >
-            <p className="text-2xl sm:text-3xl font-light text-[#2C2C2C]/90 leading-relaxed mb-8">
-              This work is <span className="font-bold text-[#68A1A7]">not for everyone</span>. 
-              It's for the ones who know — deep down — that 
-              <span className="font-bold text-[#68A1A7]"> more is possible</span>.
-            </p>
-          </motion.div>
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ delay: 0.8, duration: 0.8 }}
+  className="max-w-5xl mx-auto"
+>
+  <p className="text-2xl sm:text-3xl font-light text-[#2C2C2C]/90 leading-relaxed mb-6">
+    This work is for those who are being called to evolve into their 
+    <span className="font-semibold"> next level of freedom and power</span> – in 
+    <span className="font-semibold"> self-mastery, professional impact, financial freedom, physical vitality,</span> or 
+    <span className="font-semibold"> spiritual expansion</span>.
+  </p>
+  <p className="text-2xl sm:text-3xl font-light text-[#2C2C2C]/90 leading-relaxed">
+    This work is for those who can 
+    <span className="font-semibold"> no longer ignore the call to rise</span>, to 
+    <span className="font-semibold"> release what no longer serves</span>, and to 
+    <span className="font-semibold"> become the version of themselves</span> that 
+    <span className="font-semibold"> legacy, alignment, and liberation</span> require.
+  </p>
+</motion.div>
+
         </motion.div>
 
         {/* Story Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
@@ -192,7 +218,7 @@ const WhoIsItFor = () => {
               </p>
             </motion.div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Criteria Section */}
         <motion.div
@@ -208,7 +234,7 @@ const WhoIsItFor = () => {
             className="text-4xl sm:text-5xl font-bold text-center mb-16 text-[#474747]"
           >
            
-              Breakthrough Methods is for you if:
+           Breakthrough Methods is designed for:
           </motion.h2>
 
           <motion.div
@@ -286,20 +312,24 @@ const WhoIsItFor = () => {
             </motion.div>
             
             <h3 className="text-4xl sm:text-5xl font-bold mb-8 bg-[#68A1A7] bg-clip-text text-transparent">
-              This isn't about fixing you.
+            his isn’t about fixing you.
               <br />
-              It's about freeing you.
+              It’s about freeing and liberating you. 
             </h3>
             
             <p className="text-xl text-[#2C2C2C]/80 leading-relaxed mb-6">
-              This work is for the <span className="font-bold text-[#447087]">doers and the seekers</span>. 
-              The ones who want to lead with alignment, create with purpose, and live with the kind of 
-              internal congruence that naturally unlocks success — without the burnout, self-doubt, or sabotage.
+            This work is for the visionary leaders, creators, and innovators who know they’re meant for more - more truth, more freedom, more impact.
             </p>
             
             <p className="text-xl text-[#68A1A7] font-medium">
-              If you're ready to stop circling the same issues and finally dissolve the invisible blocks 
-              standing between you and the life you know you're meant to live — then you're in the right place.
+            If you’re ready to meet yourself at a deeper level…  <br/>
+          
+To dissolve the invisible blocks that have been silently running the show…
+<br/>
+To live, lead, and create from grounded clarity and inner peace - not struggle, stress, or the pressure to prove yourself.
+<br/>
+Then you’re exactly where you’re meant to be.
+
             </p>
           </div>
         </motion.div>

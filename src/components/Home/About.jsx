@@ -44,7 +44,7 @@ const About = () => {
         >
           <span className="text-[#50A7AD] uppercase font-semibold text-sm">About</span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#2C2C2C]">
-            Meet Your Coach
+            Meet Your Guide
           </h2>
 
           <p className="mt-6 text-[#555] text-base leading-relaxed">

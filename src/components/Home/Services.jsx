@@ -109,24 +109,16 @@ const ServicesCards = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-8 sm:mb-12 lg:mb-16"
         >
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition={{ delay: 0.3, type: "spring", stiffness: 200, damping: 15 }}
-            className="inline-flex items-center gap-2 bg-[#50A7AD]/20 backdrop-blur-sm border border-[#50A7AD]/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-4 sm:mb-6"
-          >
-            <Crown className="text-[#50A7AD]" size={16} />
-            <span className="text-[#50A7AD] font-semibold uppercase tracking-widest text-xs sm:text-sm">Work with me</span>
-          </motion.div>
+         
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight px-2">
             Choose Your
             <br />
-            Breakthrough Journey
+            Journey
           </h2>
           
           <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed px-4">
-            Select the transformational experience that aligns with your vision and commitment level.
+          Choose the path which aligns with your desired destination.
           </p>
         </motion.div>
 

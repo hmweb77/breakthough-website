@@ -17,9 +17,10 @@ export default function Home() {
       <HeroSection></HeroSection>
       <WhatAreBreakthroughMethods></WhatAreBreakthroughMethods>
       <WhoIsItFor></WhoIsItFor>
+      <ClientBeforeAfter></ClientBeforeAfter>
       {/* <BreakthroughJourney></BreakthroughJourney> */}
       <WhyItWorks></WhyItWorks>
-      <ClientBeforeAfter></ClientBeforeAfter>
+    
       {/* <HowItWorks></HowItWorks> */}
       <Process></Process>
       <Services></Services>
