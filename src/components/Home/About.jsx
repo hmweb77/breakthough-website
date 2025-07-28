@@ -28,7 +28,7 @@ const About = () => {
           viewport={{ once: true }}
         >
           <img
-            src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=700"
+            src="/aboutIMG.png"
             alt="Coach portrait"
             className="w-full h-auto rounded-xl shadow-lg object-cover"
           />
@@ -47,17 +47,23 @@ const About = () => {
             Meet Your Guide
           </h2>
 
-          <p className="mt-6 text-[#555] text-base leading-relaxed">
-            With over 15 years of experience in personal development and transformational coaching, I’ve helped hundreds of professionals, entrepreneurs, and individuals break through limitations and achieve unprecedented success.
-          </p>
-          <p className="mt-4 text-[#555] text-base leading-relaxed">
-            My approach combines proven psychological frameworks, neuroscience-based techniques, and practical strategies that create lasting change. I believe that everyone has untapped potential waiting to be unleashed.
-          </p>
+          <p className="mt-6 text-[#2C2C2C]/90 text-base leading-relaxed">
+  Known as <em>The Breakthrough Architect</em>, <span className="font-semibold">Kasia Szczesniak</span> guides high-level leaders through <span className="font-semibold">transformational experiences</span> that dismantle <span className="font-semibold">deep resistance</span> and rewire their <span className="font-semibold">internal operating system</span> for aligned <span className="font-semibold">power, clarity, and success</span>.
+</p>
+
+<p className="mt-4 text-[#2C2C2C]/90 text-base leading-relaxed">
+  Backed by <span className="font-semibold">neuroscience, NLP</span>, and <span className="font-semibold">subconscious reprogramming</span>, her work fuses <em>ancient wisdom</em> with <em>modern science</em> to create <span className="font-semibold">rapid, embodied change</span> across <span className="font-semibold">identity, behavior, and results</span>.
+</p>
+
+<p className="mt-4 text-[#2C2C2C]/90 text-base leading-relaxed">
+  Kasia doesn’t offer <em>surface-level shifts</em> – she <span className="font-semibold">architects breakthroughs and transformation from the inside out</span>.
+</p>
+
 
           {/* Certification & Feature Columns */}
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8"> */}
             {/* Certifications */}
-            <div>
+            {/* <div>
               <h4 className="text-[#2C2C2C] text-lg font-semibold mb-3">Certifications</h4>
               <ul className="space-y-3">
                 {certifications.map((cert, index) => (
@@ -67,10 +73,10 @@ const About = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* Featured In */}
-            <div>
+            {/* <div>
               <h4 className="text-[#2C2C2C] text-lg font-semibold mb-3">Featured In</h4>
               <ul className="space-y-3">
                 {features.map((feature, index) => (
@@ -80,8 +86,8 @@ const About = () => {
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
         </motion.div>
       </div>
     </section>

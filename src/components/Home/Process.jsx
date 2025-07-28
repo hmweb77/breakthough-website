@@ -6,13 +6,12 @@ const steps = [
   {
     number: 1,
     title: "Uncover",
-    subtitle: "Deep Discovery Phase",
-    description: "We identify your specific internal blocks using proprietary assessment methods that go beyond traditional coaching approaches to uncover what's been holding you back.",
-    duration: "Week 1-2",
+    subtitle: "Freedom From: Survival Patterns & Painful Conditioning",
+    description: "You begin here — in the tension of what’s no longer working. Whether it’s procrastination, overachievement, people-pleasing, or burnout, these aren’t just behaviors — they’re symptoms of deeper internal programming. In this phase, we reveal the root system: subconscious beliefs, identity structures, and protective patterns that have silently shaped your decisions and direction.",
     outcomes: [
-      "Complete subconscious pattern mapping",
-      "Root cause identification",
-      "Personal breakthrough blueprint"
+      "Subconscious blueprint revealed",
+      "Root cause and internal block identification",
+      "Personalized Breakthrough Map"
     ],
     icon: Search,
     gradient: "from-[#68A1A7] to-[#447087]",
@@ -21,13 +20,12 @@ const steps = [
   {
     number: 2,
     title: "Illuminate",
-    subtitle: "Awareness Activation",
-    description: "We bring awareness to the subconscious patterns driving your behavior and help you see the specific neural pathways keeping you stuck in self-sabotaging cycles.",
-    duration: "Week 3-4",
+    subtitle: "The Turning Point: Meeting the Invisible Forces",
+    description: " Here, we bring to light the subtle, unseen drivers that have been running your life — the inner critic, shame scripts, inherited expectations, hidden fears, and protective identities. These invisible forces aren’t your truth — they’re survival strategies. Once you can see them, you can stop being led by them.",
     outcomes: [
-      "Clear pattern recognition",
-      "Emotional trigger awareness",
-      "Behavioral loop understanding"
+      "Awareness of unconscious drivers and emotional triggers",
+      "Deconstruction of protective patterns and subconscious rules",
+      "Clarity and conscious choice begins to emerge"
     ],
     icon: Lightbulb,
     gradient: "from-[#447087] to-[#B0CCC2]",
@@ -36,13 +34,12 @@ const steps = [
   {
     number: 3,
     title: "Rewire",
-    subtitle: "Neural Transformation",
-    description: "Using advanced neuroplasticity techniques, we help you release old patterns and create new neural pathways that support your desired outcomes and identity.",
-    duration: "Week 5-8",
+    subtitle: "Freedom To: Repatterning Identity & Choosing Powerfully",
+    description: "Now that the hidden forces have been named, we dissolve their grip. Using advanced neuroplasticity and subconscious reprogramming tools, we interrupt old neural loops and build new internal pathways that align with who you are becoming.You stop reacting from the past — and start creating from power.",
     outcomes: [
-      "New neural pathway creation",
-      "Pattern interruption mastery",
-      "Identity-level shifts"
+      "Release of outdated beliefs and emotional imprints",
+      "Creation of new neural pathways and identity anchors",
+      "Transformation at the subconscious and behavioral level"
     ],
     icon: Zap,
     gradient: "from-[#B0CCC2] to-[#68A1A7]",
@@ -51,13 +48,12 @@ const steps = [
   {
     number: 4,
     title: "Embody",
-    subtitle: "Integration & Mastery",
-    description: "We integrate your new patterns into daily life, ensuring they become your default state so you naturally operate from your new level of awareness and capability.",
-    duration: "Week 9-12",
+    subtitle: "Freedom To: Integration, Expression & Self-Led Living",
+    description: "This is the shift from change to embodiment. Your new way of being is no longer a concept — it becomes your natural state. You lead from clarity. Act from alignment. Live from truth. You are no longer escaping anything. You are becoming everything you were designed to be.",
     outcomes: [
-      "Automatic new behaviors",
-      "Sustained transformation",
-      "Breakthrough lifestyle"
+      "Embodied new identity and behaviors",
+      "Sustained transformation and expanded self-leadership",
+      "Life and leadership aligned with truth, purpose, and power"
     ],
     icon: Award,
     gradient: "from-[#68A1A7] to-[#50A7AC]",
@@ -243,7 +239,7 @@ const Process = () => {
                               <span className="text-white font-bold text-sm">{step.number}</span>
                             </div>
                             <span className="text-[#447087] font-semibold text-sm uppercase tracking-wide">
-                              Phase {step.number} • {step.duration}
+                              Phase {step.number} 
                             </span>
                           </div>
                           
