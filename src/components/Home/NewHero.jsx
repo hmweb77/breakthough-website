@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const HeroSection = () => {
+const NewHeroSection = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -98,4 +98,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default NewHeroSection;
