@@ -1,97 +1,175 @@
-"use client"
-import { motion } from "framer-motion";
-import { Search, Lightbulb, Zap, Award, ArrowRight, MapPin, CheckCircle } from "lucide-react";
+"use client";
 
-const steps = [
-  {
-    number: 1,
-    title: "Uncover",
-    subtitle: "Freedom From: Survival Patterns & Painful Conditioning",
-    description: "You begin here — in the tension of what’s no longer working. Whether it’s procrastination, overachievement, people-pleasing, or burnout, these aren’t just behaviors — they’re symptoms of deeper internal programming. In this phase, we reveal the root system: subconscious beliefs, identity structures, and protective patterns that have silently shaped your decisions and direction.",
-    outcomes: [
-      "Subconscious blueprint revealed",
-      "Root cause and internal block identification",
-      "Personalized Breakthrough Map"
-    ],
-    icon: Search,
-    gradient: "from-[#68A1A7] to-[#447087]",
-    accent: "#68A1A7"
-  },
-  {
-    number: 2,
-    title: "Illuminate",
-    subtitle: "The Turning Point: Meeting the Invisible Forces",
-    description: " Here, we bring to light the subtle, unseen drivers that have been running your life — the inner critic, shame scripts, inherited expectations, hidden fears, and protective identities. These invisible forces aren’t your truth — they’re survival strategies. Once you can see them, you can stop being led by them.",
-    outcomes: [
-      "Awareness of unconscious drivers and emotional triggers",
-      "Deconstruction of protective patterns and subconscious rules",
-      "Clarity and conscious choice begins to emerge"
-    ],
-    icon: Lightbulb,
-    gradient: "from-[#447087] to-[#B0CCC2]",
-    accent: "#447087"
-  },
-  {
-    number: 3,
-    title: "Rewire",
-    subtitle: "Freedom To: Repatterning Identity & Choosing Powerfully",
-    description: "Now that the hidden forces have been named, we dissolve their grip. Using advanced neuroplasticity and subconscious reprogramming tools, we interrupt old neural loops and build new internal pathways that align with who you are becoming.You stop reacting from the past — and start creating from power.",
-    outcomes: [
-      "Release of outdated beliefs and emotional imprints",
-      "Creation of new neural pathways and identity anchors",
-      "Transformation at the subconscious and behavioral level"
-    ],
-    icon: Zap,
-    gradient: "from-[#B0CCC2] to-[#68A1A7]",
-    accent: "#B0CCC2"
-  },
-  {
-    number: 4,
-    title: "Embody",
-    subtitle: "Freedom To: Integration, Expression & Self-Led Living",
-    description: "This is the shift from change to embodiment. Your new way of being is no longer a concept — it becomes your natural state. You lead from clarity. Act from alignment. Live from truth. You are no longer escaping anything. You are becoming everything you were designed to be.",
-    outcomes: [
-      "Embodied new identity and behaviors",
-      "Sustained transformation and expanded self-leadership",
-      "Life and leadership aligned with truth, purpose, and power"
-    ],
-    icon: Award,
-    gradient: "from-[#68A1A7] to-[#50A7AC]",
-    accent: "#50A7AC"
-  }
-];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-      delayChildren: 0.2
-    }
-  }
-};
-
-const stepVariants = {
-  hidden: { 
-    opacity: 0, 
-    y: 60,
-    scale: 0.9
-  },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    scale: 1,
-    transition: {
-      duration: 0.8,
-      ease: [0.25, 0.46, 0.45, 0.94]
-    }
-  }
-};
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Search,
+  Lightbulb,
+  Zap,
+  Award,
+  ArrowRight,
+  CheckCircle,
+  ChevronLeft,
+  ChevronRight,
+  Info,
+  FileText,
+  AlertCircle,
+} from "lucide-react";
 
 const Process = () => {
+  const [activeStep, setActiveStep] = useState(0);
+  const [showTips, setShowTips] = useState(true);
+  const [currentStep, setCurrentStep] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const timelineRef = useRef(null);
+  const stepRefs = useRef([]);
+
+  const steps = [
+    {
+      title: "UNCOVER",
+      description: "Freedom From: Survival Patterns & Painful Conditioning",
+      icon: Search,
+      gradient: "from-[#68A1A7] to-[#447087]",
+      accent: "#68A1A7",
+      details: [
+        "Subconscious blueprint revealed",
+        "Root cause and internal block identification", 
+        "Personalized Breakthrough Map"
+      ],
+      tips: "You begin here — in the tension of what's no longer working. Whether it's procrastination, overachievement, people-pleasing, or burnout, these aren't just behaviors — they're symptoms of deeper internal programming.",
+      requiredDocs: [
+        "Initial assessment questionnaire",
+        "Personal history intake form",
+        "Goal-setting worksheet"
+      ]
+    },
+    {
+      title: "ILLUMINATE",
+      description: "The Turning Point: Meeting the Invisible Forces",
+      icon: Lightbulb,
+      gradient: "from-[#447087] to-[#B0CCC2]",
+      accent: "#447087",
+      details: [
+        "Awareness of unconscious drivers and emotional triggers",
+        "Deconstruction of protective patterns and subconscious rules",
+        "Clarity and conscious choice begins to emerge"
+      ],
+      tips: "Here, we bring to light the subtle, unseen drivers that have been running your life — the inner critic, shame scripts, inherited expectations, hidden fears, and protective identities.",
+      requiredDocs: [
+        "Pattern recognition exercises",
+        "Trigger identification worksheets",
+        "Family dynamics assessment"
+      ]
+    },
+    {
+      title: "REWIRE", 
+      description: "Freedom To: Repatterning Identity & Choosing Powerfully",
+      icon: Zap,
+      gradient: "from-[#B0CCC2] to-[#68A1A7]",
+      accent: "#B0CCC2",
+      details: [
+        "Release of outdated beliefs and emotional imprints",
+        "Creation of new neural pathways and identity anchors",
+        "Transformation at the subconscious and behavioral level"
+      ],
+      tips: "Using advanced neuroplasticity and subconscious reprogramming tools, we interrupt old neural loops and build new internal pathways that align with who you are becoming.",
+      requiredDocs: [
+        "Neuroplasticity practice guide",
+        "Identity transformation workbook",
+        "Daily rewiring exercises"
+      ]
+    },
+    {
+      title: "EMBODY",
+      description: "Freedom To: Integration, Expression & Self-Led Living", 
+      icon: Award,
+      gradient: "from-[#68A1A7] to-[#50A7AC]",
+      accent: "#50A7AC",
+      details: [
+        "Embodied new identity and behaviors",
+        "Sustained transformation and expanded self-leadership",
+        "Life and leadership aligned with truth, purpose, and power"
+      ],
+      tips: "This is the shift from change to embodiment. Your new way of being is no longer a concept — it becomes your natural state. You lead from clarity. Act from alignment. Live from truth.",
+      requiredDocs: [
+        "Integration plan",
+        "Leadership assessment tools",
+        "Ongoing support resources"
+      ]
+    }
+  ];
+
+  const serviceVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  // Check if mobile on mount and resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (steps && activeStep >= 0) {
+      setCurrentStep(steps[activeStep]);
+    }
+  }, [activeStep]);
+
+  // Auto-scroll to active step on mobile
+  useEffect(() => {
+    if (isMobile && timelineRef.current && stepRefs.current[activeStep]) {
+      const timeline = timelineRef.current;
+      const activeStepElement = stepRefs.current[activeStep];
+      
+      if (activeStepElement) {
+        const stepOffsetLeft = activeStepElement.offsetLeft;
+        const stepWidth = activeStepElement.offsetWidth;
+        const timelineWidth = timeline.offsetWidth;
+        
+        // Calculate scroll position to center the active step
+        const scrollLeft = stepOffsetLeft - (timelineWidth / 2) + (stepWidth / 2);
+        
+        timeline.scrollTo({
+          left: Math.max(0, scrollLeft),
+          behavior: 'smooth'
+        });
+      }
+    }
+  }, [activeStep, isMobile]);
+
+  const handleNext = () => {
+    if (activeStep < steps.length - 1) {
+      setActiveStep((prevStep) => prevStep + 1);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (activeStep > 0) {
+      setActiveStep((prevStep) => prevStep - 1);
+    }
+  };
+
+  const handleStepClick = (index) => {
+    setActiveStep(index);
+  };
+
+  if (!currentStep) return null;
+
   return (
-    <section className="py-32 px-6 relative overflow-hidden" style={{ backgroundColor: "#50A7AC" }}>
+    <section className="py-12 md:py-24 px-4 relative overflow-hidden" style={{ backgroundColor: "#50A7AC" }}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 border border-white/20 rounded-full"></div>
@@ -100,18 +178,16 @@ const Process = () => {
         <div className="absolute bottom-20 right-20 w-28 h-28 border border-white/20 rounded-full"></div>
       </div>
 
-      <div className="max-w-8xl mx-auto relative z-10">
-        {/* Enhanced Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-center max-w-4xl mx-auto mb-24"
-        >
-         
-
-          <h2 className="text-6xl sm:text-7xl lg:text-8xl font-bold mb-8 text-white leading-tight">
-          Your Liberation  
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Header Section */}
+        <div className="relative mb-8 md:mb-12">
+          <motion.h1
+            variants={serviceVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-center text-white mb-4 md:mb-8 leading-tight"
+          >
+            Your Liberation
             <br />
             <motion.span
               initial={{ opacity: 0, x: -50 }}
@@ -127,246 +203,216 @@ const Process = () => {
                 className="absolute -bottom-3 left-0 right-0 h-2 bg-white/40 rounded-full origin-left"
               />
             </motion.span>
-          </h2>
+          </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-            className="text-xl sm:text-2xl text-white/90 leading-relaxed font-light"
+            variants={serviceVariants}
+            initial="hidden" 
+            whileInView="visible"
+            transition={{ delay: 0.3 }}
+            className="text-lg md:text-xl text-center text-white/90 mx-auto mb-6 md:mb-8 max-w-4xl leading-relaxed"
           >
             A neuroscience-informed journey from survival to sovereignty - designed to liberate you from internal resistance, reveal the invisible forces shaping your life, and activate the identity, power, and purpose that have always been within you.
           </motion.p>
-        </motion.div>
+        </div>
 
-        {/* Roadmap Timeline */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="relative"
-        >
-          {/* Central Timeline Line */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-white/30 transform -translate-x-1/2">
-            <motion.div
-              initial={{ height: 0 }}
-              whileInView={{ height: "100%" }}
-              transition={{ duration: 2, delay: 1 }}
-              className="w-full bg-gradient-to-b from-white/60 to-white/20 rounded-full"
-            />
+        <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 md:p-8">
+          {/* Header */}
+          <div className="flex justify-between items-center mb-6 md:mb-8">
+            <h2 className="text-xl md:text-2xl font-bold text-white">
+              Process Timeline
+            </h2>
+            <button
+              onClick={() => setShowTips(!showTips)}
+              className="p-2 rounded-full hover:bg-white/10 transition-colors"
+            >
+              <Info
+                className={`w-5 h-5 md:w-6 md:h-6 ${showTips ? "text-white" : "text-white/60"}`}
+              />
+            </button>
           </div>
 
-          {/* Steps */}
-          <div className="space-y-16 lg:space-y-24">
-            {steps.map((step, index) => {
-              const IconComponent = step.icon;
-              const isEven = index % 2 === 0;
-              
-              return (
-                <motion.div
-                  key={index}
-                  variants={stepVariants}
-                  className={`relative flex flex-col lg:flex-row items-center gap-12 ${
-                    isEven ? '' : 'lg:flex-row-reverse'
-                  }`}
-                >
-                  {/* Timeline Node */}
-                  <motion.div
-                    initial={{ scale: 0, rotate: -180 }}
-                    whileInView={{ scale: 1, rotate: 0 }}
-                    transition={{ delay: index * 0.2 + 0.5, type: "spring", stiffness: 200 }}
-                    className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:block"
-                  >
-                    <div className="relative">
-                      {/* Pulsing Ring */}
-                      <motion.div
-                        animate={{
-                          scale: [1, 1.5, 1],
-                          opacity: [0.3, 0.6, 0.3]
-                        }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                          delay: index * 0.5
-                        }}
-                        className="absolute inset-0 w-20 h-20 border-4 border-white/40 rounded-full"
-                      />
-                      
-                      {/* Main Node */}
-                      <div 
-                        className={`w-20 h-20 rounded-full bg-gradient-to-br ${step.gradient} flex items-center justify-center shadow-2xl border-4 border-white/30`}
-                      >
-                        <IconComponent className="text-white" size={32} />
-                      </div>
-                      
-                      {/* Step Number */}
-                      <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
-                        <span className="text-[#2C2C2C] font-bold text-sm">{step.number}</span>
-                      </div>
-                    </div>
-                  </motion.div>
+          {/* Timeline */}
+          <div className="relative mb-6 md:mb-12">
+            {/* Progress Line */}
+            <div className="absolute top-8 left-0 w-full h-1 bg-white/20 hidden md:block" />
+            <div 
+              className="absolute top-8 left-0 h-1 transition-all duration-500 hidden md:block"
+              style={{ 
+                width: `${((activeStep + 1) / steps.length) * 100}%`,
+                background: `linear-gradient(to right, ${steps[0].accent}, ${steps[Math.min(activeStep, steps.length - 1)].accent})`
+              }}
+            />
 
-                  {/* Content Card */}
-                  <div className={`lg:w-1/2 ${isEven ? 'lg:pr-16' : 'lg:pl-16'}`}>
+            {/* Timeline Container */}
+            <div 
+              ref={timelineRef}
+              className="relative overflow-x-auto scrollbar-hide pb-4"
+              style={{ 
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none'
+              }}
+            >
+              <div className="flex md:justify-between gap-4 md:gap-0 px-4 md:px-0" style={{ minWidth: isMobile ? `${steps.length * 200}px` : 'auto' }}>
+                {steps.map((step, index) => {
+                  const IconComponent = step.icon;
+                  return (
                     <motion.div
-                      whileHover={{ 
-                        y: -8,
-                        scale: 1.02,
-                        transition: { duration: 0.3 }
-                      }}
-                      className="bg-white/95 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-white/20 relative overflow-hidden"
+                      key={index}
+                      ref={el => stepRefs.current[index] = el}
+                      className={`relative flex flex-col items-center group ${
+                        isMobile ? 'w-48 flex-shrink-0' : 'w-40 sm:w-48'
+                      } ${
+                        index === activeStep ? "scale-105" : ""
+                      }`}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
                     >
-                      {/* Card Background Accent */}
-                      <div 
-                        className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl ${step.gradient} opacity-10 rounded-bl-full`}
-                      />
-                      
-                      <div className="relative z-10">
-                        {/* Mobile Icon */}
-                        <div className="lg:hidden mb-6">
+                      <button
+                        onClick={() => handleStepClick(index)}
+                        className={`w-12 h-12 mt-1 rounded-full flex items-center justify-center
+                          ${index <= activeStep ? "text-white" : "text-gray-400"} 
+                          ${index === activeStep ? "ring-4 ring-blue-200 shadow-lg" : ""}
+                          border-2 transition-all duration-300 cursor-pointer group-hover:shadow-lg`}
+                        style={{
+                          background: index <= activeStep 
+                            ? `linear-gradient(135deg, ${step.accent}, #50A7AC)` 
+                            : '#f3f4f6',
+                          borderColor: index <= activeStep ? step.accent : '#d1d5db'
+                        }}
+                      >
+                        <IconComponent className="w-5 h-5" />
+                      </button>
+
+                      {/* Mobile: Show connecting line to next step */}
+                      {isMobile && index < steps.length - 1 && (
+                        <div className="absolute top-6 left-16 w-32 h-0.5 bg-white/20">
                           <div 
-                            className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${step.gradient} flex items-center justify-center shadow-lg mb-4`}
-                          >
-                            <IconComponent className="text-white" size={28} />
-                          </div>
+                            className={`h-full transition-all duration-500 ${
+                              index < activeStep ? 'w-full' : 'w-0'
+                            }`}
+                            style={{
+                              background: index < activeStep 
+                                ? `linear-gradient(to right, ${step.accent}, ${steps[index + 1]?.accent || step.accent})`
+                                : 'transparent'
+                            }}
+                          />
                         </div>
+                      )}
 
-                        {/* Header */}
-                        <div className="mb-6">
-                          <div className="flex items-center gap-3 mb-2">
-                            <div className="w-8 h-8 rounded-full bg-[#2C2C2C] flex items-center justify-center">
-                              <span className="text-white font-bold text-sm">{step.number}</span>
-                            </div>
-                            <span className="text-[#447087] font-semibold text-sm uppercase tracking-wide">
-                              Phase {step.number} 
-                            </span>
-                          </div>
-                          
-                          <h3 className="text-3xl font-bold text-[#2C2C2C] mb-2">{step.title}</h3>
-                          <p className="text-lg font-medium text-[#447087]">{step.subtitle}</p>
-                        </div>
-
-                        {/* Description */}
-                        <p className="text-[#2C2C2C]/80 text-lg leading-relaxed mb-8">
+                      <div
+                        className={`text-center mt-4 transition-colors duration-300 ${
+                          index === activeStep
+                            ? "text-gray-800"
+                            : "text-gray-600"
+                        }`}
+                      >
+                        <h3 className="font-bold text-xs sm:text-sm mb-1 leading-tight">
+                          {step.title}
+                        </h3>
+                        <p className="text-xs opacity-80 leading-tight">
                           {step.description}
                         </p>
-
-                        {/* Outcomes */}
-                        <div>
-                          <h4 className="text-[#2C2C2C] font-bold mb-4 flex items-center gap-2">
-                            <CheckCircle className="text-[#68A1A7]" size={20} />
-                            Key Outcomes:
-                          </h4>
-                          <ul className="space-y-3">
-                            {step.outcomes.map((outcome, outIndex) => (
-                              <motion.li
-                                key={outIndex}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ delay: index * 0.2 + outIndex * 0.1 + 0.8 }}
-                                className="flex items-center gap-3 text-[#2C2C2C]/80"
-                              >
-                                <div 
-                                  className="w-2 h-2 rounded-full flex-shrink-0"
-                                  style={{ backgroundColor: step.accent }}
-                                />
-                                <span className="font-medium">{outcome}</span>
-                              </motion.li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        {/* Progress Indicator */}
-                        <motion.div
-                          initial={{ scaleX: 0 }}
-                          whileInView={{ scaleX: 1 }}
-                          transition={{ delay: index * 0.2 + 1, duration: 0.8 }}
-                          className={`mt-8 h-1 bg-gradient-to-r ${step.gradient} rounded-full origin-left`}
-                        />
                       </div>
                     </motion.div>
-                  </div>
-
-                  {/* Visual Element */}
-                  <div className={`lg:w-1/2 ${isEven ? 'lg:pl-16' : 'lg:pr-16'}`}>
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: index * 0.2 + 0.6, duration: 0.8 }}
-                      className="relative"
-                    >
-                      {/* Decorative Elements */}
-                      <div className="relative bg-white/20 backdrop-blur-sm rounded-3xl p-12 border border-white/30">
-                        <motion.div
-                          animate={{
-                            rotate: [0, 360],
-                            scale: [1, 1.1, 1]
-                          }}
-                          transition={{
-                            duration: 15,
-                            repeat: Infinity,
-                            ease: "linear"
-                          }}
-                          className={`w-32 h-32 mx-auto bg-gradient-to-br ${step.gradient} rounded-full flex items-center justify-center shadow-2xl`}
-                        >
-                          <IconComponent className="text-white" size={48} />
-                        </motion.div>
-                        
-                        {/* Floating Elements */}
-                        <motion.div
-                          animate={{
-                            y: [0, -20, 0],
-                            opacity: [0.3, 0.8, 0.3]
-                          }}
-                          transition={{
-                            duration: 3,
-                            repeat: Infinity,
-                            delay: index * 0.5
-                          }}
-                          className="absolute top-4 right-4 w-4 h-4 bg-white/40 rounded-full"
-                        />
-                        <motion.div
-                          animate={{
-                            y: [0, 15, 0],
-                            opacity: [0.4, 0.9, 0.4]
-                          }}
-                          transition={{
-                            duration: 2.5,
-                            repeat: Infinity,
-                            delay: index * 0.3
-                          }}
-                          className="absolute bottom-8 left-6 w-3 h-3 bg-white/50 rounded-full"
-                        />
-                      </div>
-                    </motion.div>
-                  </div>
-                </motion.div>
-              );
-            })}
+                  );
+                })}
+              </div>
+            </div>
           </div>
-        </motion.div>
+
+          {/* Navigation and Description */}
+          <div className="flex items-center justify-between mb-6 md:mb-8">
+            <button
+              onClick={handlePrevious}
+              disabled={activeStep === 0}
+              className={`p-3 rounded-lg transition-all ${
+                activeStep > 0
+                  ? "text-white hover:shadow-lg"
+                  : "bg-gray-200 text-gray-400 cursor-not-allowed"
+              }`}
+              style={{
+                backgroundColor: activeStep > 0 ? steps[0].accent : undefined
+              }}
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            
+            {/* Description Section */}
+            <div className="flex-1 mx-6">
+              <div className="p-4 md:p-5 rounded-lg text-center" style={{ backgroundColor: `${currentStep.accent}10` }}>
+                <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                  {currentStep.tips}
+                </p>
+              </div>
+            </div>
+            
+            <button
+              onClick={handleNext}
+              disabled={activeStep === steps.length - 1}
+              className={`p-3 rounded-lg transition-all ${
+                activeStep < steps.length - 1
+                  ? "text-white hover:shadow-lg"
+                  : "bg-gray-200 text-gray-400 cursor-not-allowed"
+              }`}
+              style={{
+                backgroundColor: activeStep < steps.length - 1 ? steps[0].accent : undefined
+              }}
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+
+          {/* Content */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeStep}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              {/* Key Outcomes Section */}
+              <div>
+                <div className="flex items-center gap-2 mb-4">
+                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6" style={{ color: currentStep.accent }} />
+                  <h4 className="font-semibold text-gray-800 text-base md:text-lg">
+                    Key Outcomes
+                  </h4>
+                </div>
+                <ul className="space-y-3">
+                  {currentStep.details?.map((detail, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-3 p-3 rounded-lg text-sm md:text-base"
+                      style={{ backgroundColor: `${currentStep.accent}15` }}
+                    >
+                      <CheckCircle 
+                        className="w-4 h-4 md:w-5 md:h-5 mt-0.5 flex-shrink-0" 
+                        style={{ color: currentStep.accent }}
+                      />
+                      <span className="text-gray-700">{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
         {/* Enhanced CTA */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 0.8 }}
-          className="text-center mt-24"
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="text-center mt-12 md:mt-16"
         >
-          <motion.div
-            className="mb-12"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1.7, duration: 0.6 }}
-          >
-            <h3 className="text-4xl font-bold text-white mb-4">
-              Ready to begin your transformation?
-            </h3>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Start with our breakthrough assessment and discover exactly where you are on this journey.
-            </p>
-          </motion.div>
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8">
+            Ready to begin your transformation?
+          </h3>
+          <p className="text-white/90 max-w-3xl mx-auto text-sm md:text-base leading-relaxed mb-8">
+            Start with our breakthrough assessment and discover exactly where you are on this journey.
+          </p>
 
           <motion.a
             href="#quiz"
@@ -375,11 +421,8 @@ const Process = () => {
               boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
             }}
             whileTap={{ scale: 0.98 }}
-            className="group inline-flex items-center gap-3 bg-white text-[#2C2C2C] font-bold px-12 py-6 rounded-2xl text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden relative"
+            className="group inline-flex items-center gap-3 bg-white text-gray-800 font-bold px-8 md:px-12 py-4 md:py-6 rounded-2xl text-lg md:text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden relative"
           >
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-[#F0F1F0] to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            />
             <span className="relative z-10">Start Your Breakthrough Journey</span>
             <motion.div
               animate={{ x: [0, 5, 0] }}
@@ -393,13 +436,19 @@ const Process = () => {
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 1.9, duration: 0.6 }}
-            className="mt-6 text-white/80 font-medium"
+            transition={{ delay: 0.7, duration: 0.6 }}
+            className="mt-6 text-white/80 font-medium text-sm md:text-base"
           >
             ✨ Personalized roadmap • Science-backed methods • Lasting results
           </motion.p>
         </motion.div>
       </div>
+
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 };

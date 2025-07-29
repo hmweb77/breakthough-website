@@ -6,10 +6,10 @@ import { useState } from "react";
 
 const clients = [
   {
-    name: "João",
+    name: "Joao Guerreiro - Online Business Owner",
     beforeImg: "/imgbaf/Black and White Minimalist Before After Beauty Instagram Post (1).png",
     afterImg: "/imgbaf/5.png",
-    quote: "I finally feel like myself again — but stronger. The fog is gone.",
+    quote: "With each session, I get closer and closer to who I really am",
   },
   {
     name: "Ania",
@@ -58,7 +58,7 @@ const ClientBeforeAfter = () => {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-lg sm:text-xl text-[#555] max-w-2xl mx-auto mb-16"
         >
-          See the visible shifts in presence, vitality, and energy that occur after just one session.
+          Their eyes tell the story - the release of old burdens, the return of clarity, the rise of inner power. The transformation is undeniable. The tension is gone, the light is back, and the energy has shifted. It’s not just visible; it’s felt - a new presence, a deeper truth, a liberated self. Their before-and-after says more than a testimonial ever could. What you’re seeing is the embodiment of truth, power, and freedom reclaimed.
         </motion.p>
 
         {/* Slider Container */}

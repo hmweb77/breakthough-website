@@ -312,7 +312,7 @@ const WhoIsItFor = () => {
             </motion.div>
             
             <h3 className="text-4xl sm:text-5xl font-bold mb-8 bg-[#68A1A7] bg-clip-text text-transparent">
-            his isn’t about fixing you.
+            This isn’t about fixing you.
               <br />
               It’s about freeing and liberating you. 
             </h3>
