@@ -7,20 +7,20 @@ import { useState } from "react";
 const clients = [
   {
     name: "Joao Guerreiro - Online Business Owner",
-    beforeImg: "/imgbaf/Black and White Minimalist Before After Beauty Instagram Post (1).png",
-    afterImg: "/imgbaf/5.png",
+    beforeImg: "/imgbaf/Screenshot 2025-08-11 at 22.12.23.png",
+    afterImg: "/imgbaf/Screenshot 2025-08-11 at 22.14.19.png",
     quote: "With each session, I get closer and closer to who I really am",
   },
   {
     name: "Ania",
-    beforeImg: "/womanB.png",
-    afterImg: "/womanA.png",
+    beforeImg: "/imgbaf/Screenshot 2025-08-11 at 22.16.29.png",
+    afterImg: "/imgbaf/Screenshot 2025-08-11 at 22.19.59.png",
     quote: "My face softened. I looked younger. I felt lighter — and free.",
   },
   {
     name: "Tiago",
     beforeImg: "/imgbaf/13.png",
-    afterImg: "/imgbaf/14.png",
+    afterImg: "/imgbaf/Screenshot 2025-08-11 at 22.15.30.png",
     quote: "My face softened. I looked younger. I felt lighter — and free.",
   },
 ];
