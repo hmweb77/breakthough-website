@@ -104,7 +104,7 @@ const Navbar = () => {
 
             {/* Desktop CTA Button */}
             <motion.a
-              href="#quiz"
+              href="/quiz"
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 10px 25px rgba(68, 112, 135, 0.3)"
