@@ -4,7 +4,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, Mail } from 'lucide-react';
-import { quizData, calculateResult } from './quizData';
+
+import { quizData,calculateResult } from './quizData';
 import QuizQuestion from './QuizQuestion';
 import EmailCapture from './EmailCapture';
 import QuizResult from './QuizResult';
