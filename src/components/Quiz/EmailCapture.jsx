@@ -1,4 +1,4 @@
-// components/EmailCapture.jsx
+// components/Quiz/EmailCapture.jsx - Updated Version
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, ChevronLeft, Loader2 } from 'lucide-react';
@@ -44,7 +44,7 @@ const EmailCapture = ({ onSubmit, onBack }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full"
+        className="bg-white rounded-2xl shadow-xl p-8 max-w-lg w-full"
       >
         {/* Back Button */}
         <button
@@ -57,7 +57,7 @@ const EmailCapture = ({ onSubmit, onBack }) => {
 
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-[#68A1A7] rounded-full flex items-center justify-center mx-auto mb-4">
             <Mail size={24} className="text-white" />
           </div>
           <h2 className="text-2xl font-bold text-gray-800 mb-2">
@@ -91,7 +91,7 @@ const EmailCapture = ({ onSubmit, onBack }) => {
           <motion.button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-green-600 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+            className="w-full bg-[#68A1A7] text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-green-600 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
             whileHover={{ scale: isLoading ? 1 : 1.02 }}
             whileTap={{ scale: isLoading ? 1 : 0.98 }}
           >
@@ -106,9 +106,9 @@ const EmailCapture = ({ onSubmit, onBack }) => {
           </motion.button>
         </form>
 
-        {/* Privacy Note */}
-        <p className="text-xs text-gray-500 text-center mt-4">
-          We respect your privacy. Your email will only be used to send your quiz results.
+        {/* Updated Privacy Note */}
+        <p className="text-xs text-gray-500 text-center mt-4 leading-relaxed">
+          Submission of your email address constitutes consent to receive quiz results and future communications; you may opt out at any time by using the unsubscribe link provided.
         </p>
       </motion.div>
     </div>
