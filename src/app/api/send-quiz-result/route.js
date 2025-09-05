@@ -2,7 +2,6 @@
 
 // For Next.js 13+ (App Router)
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
 
 export async function POST(request) {
   try {
@@ -15,34 +14,37 @@ export async function POST(request) {
       );
     }
 
-    // Create transporter (configure with your email service)
-    const transporter = nodemailer.createTransporter({
-      // Gmail configuration
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS, // Use App Password for Gmail
-      },
-      // Or use SMTP configuration
-      // host: 'smtp.your-email-provider.com',
-      // port: 587,
-      // secure: false,
-      // auth: {
-      //   user: process.env.EMAIL_USER,
-      //   pass: process.env.EMAIL_PASS,
-      // },
-    });
-
     const htmlContent = generateEmailHTML(result);
 
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: email,
-      subject: `Your Quiz Results: ${result.description.title} is Your Invisible Force`,
-      html: htmlContent,
-    };
+    // Brevo API call
+    const brevoResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'api-key': process.env.BREVO_API_KEY,
+      },
+      body: JSON.stringify({
+        sender: {
+          name: process.env.SENDER_NAME || 'Quiz Results',
+          email: process.env.SENDER_EMAIL,
+        },
+        to: [
+          {
+            email: email,
+            name: 'Quiz Participant',
+          },
+        ],
+        subject: `Your Quiz Results: ${result.description.title} is Your Invisible Force`,
+        htmlContent: htmlContent,
+      }),
+    });
 
-    await transporter.sendMail(mailOptions);
+    if (!brevoResponse.ok) {
+      const errorData = await brevoResponse.json();
+      console.error('Brevo API error:', errorData);
+      throw new Error(`Brevo API error: ${brevoResponse.status}`);
+    }
 
     return NextResponse.json(
       { message: 'Email sent successfully' },
