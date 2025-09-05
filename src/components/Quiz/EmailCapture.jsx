@@ -61,7 +61,7 @@ const EmailCapture = ({ onSubmit, onBack }) => {
             <Mail size={24} className="text-white" />
           </div>
           <h2 className="text-2xl font-bold text-gray-800 mb-2">
-            Get Your Results
+            Receive Your Results
           </h2>
           <p className="text-gray-600">
             Enter your email to receive your personalized quiz results and discover which invisible force is leading your life.
@@ -101,7 +101,7 @@ const EmailCapture = ({ onSubmit, onBack }) => {
                 Sending Results...
               </>
             ) : (
-              'Get My Results'
+              'Receive My Results'
             )}
           </motion.button>
         </form>

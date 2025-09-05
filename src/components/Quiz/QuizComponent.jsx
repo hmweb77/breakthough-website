@@ -130,7 +130,7 @@ const QuizComponent = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       {/* Progress Bar - Fixed at top */}
-      {/* <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
         <div className="max-w-4xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium text-gray-600">
@@ -149,7 +149,7 @@ const QuizComponent = () => {
             />
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Add padding to account for fixed progress bar */}
       <div>

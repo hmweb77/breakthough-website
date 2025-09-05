@@ -26,9 +26,9 @@ const QuizQuestion = ({ question, onAnswer, onBack, questionNumber }) => {
 
         {/* Question */}
         <div className="text-center mb-4">
-          <div className="text-sm font-medium text-[#447087] mb-4">
+          {/* <div className="text-sm font-medium text-[#447087] mb-4">
             Question {questionNumber} of 11
-          </div>
+          </div> */}
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6 leading-relaxed">
             {question.question}
           </h2>

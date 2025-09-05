@@ -22,7 +22,7 @@ const ThankYou = ({ userEmail, onRestart }) => {
           className="space-y-6"
         >
           <h1 className="text-4xl font-bold text-[#68A1A7] mb-4">
-            Thank you! 💌
+            Thank you!
           </h1>
           
           <p className="text-xl text-gray-700 leading-relaxed">
@@ -48,7 +48,7 @@ const ThankYou = ({ userEmail, onRestart }) => {
         </motion.div>
 
         {/* Optional Restart Button */}
-        {onRestart && (
+        {/* {onRestart && (
           <motion.button
             onClick={onRestart}
             initial={{ opacity: 0 }}
@@ -58,7 +58,7 @@ const ThankYou = ({ userEmail, onRestart }) => {
           >
             Take Quiz Again
           </motion.button>
-        )}
+        )} */}
       </motion.div>
     </div>
   );
