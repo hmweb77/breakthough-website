@@ -20,7 +20,7 @@ export const quizData = {
         answers: [
           { text: "I play small because it feels safer.", force: "Fear" },
           { text: "I bend over backwards to keep others happy.", force: "People-Pleasing" },
-          { text: " I work hard but always feel like it\’s never \"enough.\"", force: "Perfectionism" },
+          { text: " I work hard but always feel like it\’s never \"enough\".", force: "Perfectionism" },
           { text: "I keep sabotaging myself with indecision.", force: "Inner Conflict" },
           { text: "I sacrifice myself and then feel resentful.", force: "Guilt & Shame" },
           { text: "I follow the rules even when they don't fit me.", force: "Conditioning" }
@@ -106,7 +106,7 @@ export const quizData = {
           { text: "Freedom to be authentic without judgment.", force: "People-Pleasing" },
           { text: "Freedom to truly feel accomplished and successful without the burnout.", force: "Perfectionism" },
           { text: "Freedom to move forward with clarity.", force: "Inner Conflict" },
-          { text: "Freedom to chose myself without guilt and shame.", force: "Guilt & Shame" },
+          { text: "Freedom to choose myself without guilt and shame.", force: "Guilt & Shame" },
           { text: "Freedom to live life by my own rules.", force: "Conditioning" }
         ]
       },
