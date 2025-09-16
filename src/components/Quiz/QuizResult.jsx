@@ -47,7 +47,7 @@ const QuizResult = ({ result, onRestart, userEmail }) => {
           className={`bg-gradient-to-br ${description.color} rounded-2xl shadow-2xl p-8 text-white mb-8`}
         >
           <div className="text-center">
-            <div className="text-6xl mb-4">{description.emoji}</div>
+          
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Your Invisible Force: {description.title}
             </h2>

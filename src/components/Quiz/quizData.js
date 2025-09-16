@@ -11,7 +11,7 @@ export const quizData = {
           { text: "I push myself to do it perfectly before I begin.", force: "Perfectionism" },
           { text: "Part of me wants it, another part holds back.", force: "Inner Conflict" },
           { text: "I feel guilty for even wanting it.", force: "Guilt & Shame" },
-          { text: "I default to what's expected, even if it doesn't feel right.", force: "Conditioning" }
+          { text: "I default to what is expected of me, even if it doesn’t feel right", force: "Conditioning" }
         ]
       },
       {
@@ -20,7 +20,7 @@ export const quizData = {
         answers: [
           { text: "I play small because it feels safer.", force: "Fear" },
           { text: "I bend over backwards to keep others happy.", force: "People-Pleasing" },
-          { text: "I work hard but never feel \"enough.\"", force: "Perfectionism" },
+          { text: " I work hard but always feel like it\’s never \"enough.\"", force: "Perfectionism" },
           { text: "I keep sabotaging myself with indecision.", force: "Inner Conflict" },
           { text: "I sacrifice myself and then feel resentful.", force: "Guilt & Shame" },
           { text: "I follow the rules even when they don't fit me.", force: "Conditioning" }
@@ -32,32 +32,32 @@ export const quizData = {
         answers: [
           { text: "Fear of failing.", force: "Fear" },
           { text: "Carrying the weight of others' expectations.", force: "People-Pleasing" },
-          { text: "Burnout from proving myself.", force: "Perfectionism" },
-          { text: "Starting and stopping without momentum.", force: "Inner Conflict" },
+          { text: "Burnout from feeling the constant need to prove myself.", force: "Perfectionism" },
+          { text: "Starting and stopping and not being able to build momentum.", force: "Inner Conflict" },
           { text: "Feeling guilty for wanting more.", force: "Guilt & Shame" },
-          { text: "Living a life that doesn't even feel like mine.", force: "Conditioning" }
+          { text: "Living a life that doesn’t feel like mine.", force: "Conditioning" }
         ]
       },
       {
         id: 4,
         question: "How do you usually handle success or recognition?",
         answers: [
-          { text: "I downplay it and think it won't last.", force: "Fear" },
-          { text: "I wonder if I've disappointed someone else in the process.", force: "People-Pleasing" },
+          { text: "I can’t fully enjoy it because I’m afraid it won’t last.", force: "Fear" },
+          { text: "I wonder if I’ve hurt or disappointed anyone in the process. ", force: "People-Pleasing" },
           { text: "I move the goalpost and aim for the next thing.", force: "Perfectionism" },
-          { text: "I argue with myself about whether I really earned it.", force: "Inner Conflict" },
-          { text: "I feel selfish enjoying it.", force: "Guilt & Shame" },
+          { text: "I question whether I truly earned it and deserve it, or not.", force: "Inner Conflict" },
+          { text: "I feel selfish and guilty for enjoying it.", force: "Guilt & Shame" },
           { text: "I tell myself \"don't get too excited, stay practical.\"", force: "Conditioning" }
         ]
       },
       {
         id: 5,
-        question: "When making an important decision, what drives you most?",
+        question: "When making an important decision, what drives you the most?",
         answers: [
           { text: "Safety and avoiding mistakes.", force: "Fear" },
           { text: "Keeping others comfortable.", force: "People-Pleasing" },
           { text: "Doing it the \"right\" way.", force: "Perfectionism" },
-          { text: "Battling between competing inner voices.", force: "Inner Conflict" },
+          { text: "Trusting my own judgement.", force: "Inner Conflict" },
           { text: "Avoiding guilt or criticism.", force: "Guilt & Shame" },
           { text: "Following the path others expect of me.", force: "Conditioning" }
         ]
@@ -88,13 +88,13 @@ export const quizData = {
       },
       {
         id: 8,
-        question: "What's the biggest cost you feel from the way things are right now?",
+        question: "What would you say is the biggest cost of the way things are right now?",
         answers: [
-          { text: "Opportunities slip through my fingers.", force: "Fear" },
-          { text: "I keep putting others first and losing myself.", force: "People-Pleasing" },
-          { text: "I burn out and still don't feel good enough.", force: "Perfectionism" },
-          { text: "I waste time stuck in cycles of indecision.", force: "Inner Conflict" },
-          { text: "I live with guilt instead of joy.", force: "Guilt & Shame" },
+          { text: "Too many opportunities slip through my fingers.", force: "Fear" },
+          { text: "Losing myself as I always put others first.", force: "People-Pleasing" },
+          { text: "I burn myself out and still don’t feel like I’ve done enough.", force: "Perfectionism" },
+          { text: "Wasted time due to cycles of indecision.", force: "Inner Conflict" },
+          { text: "The joy I once had is gone, overtaken by guilt and shame.", force: "Guilt & Shame" },
           { text: "I keep living a script that isn't mine.", force: "Conditioning" }
         ]
       },
@@ -104,9 +104,9 @@ export const quizData = {
         answers: [
           { text: "Freedom to take risks without fear.", force: "Fear" },
           { text: "Freedom to be authentic without judgment.", force: "People-Pleasing" },
-          { text: "Freedom to feel enough without overworking.", force: "Perfectionism" },
+          { text: "Freedom to truly feel accomplished and successful without the burnout.", force: "Perfectionism" },
           { text: "Freedom to move forward with clarity.", force: "Inner Conflict" },
-          { text: "Freedom to choose myself without guilt.", force: "Guilt & Shame" },
+          { text: "Freedom to chose myself without guilt and shame.", force: "Guilt & Shame" },
           { text: "Freedom to live life by my own rules.", force: "Conditioning" }
         ]
       },
@@ -115,8 +115,8 @@ export const quizData = {
         question: "When it comes to living your truth, what feels most challenging right now?",
         answers: [
           { text: "I hold back out of fear of judgment.", force: "Fear" },
-          { text: "I change myself to keep others comfortable.", force: "People-Pleasing" },
-          { text: "I hide behind achievement instead of honesty.", force: "Perfectionism" },
+          { text: "I compromise myself to keep others comfortable.", force: "People-Pleasing" },
+          { text: "I hide behind achievement instead of being who I am.", force: "Perfectionism" },
           { text: "I silence parts of me that don't \"fit.\"", force: "Inner Conflict" },
           { text: "I feel guilty putting my truth before others.", force: "Guilt & Shame" },
           { text: "I follow the truth I was taught, not the one I feel.", force: "Conditioning" }
@@ -143,42 +143,42 @@ export const quizData = {
       shortDescription: "You're being held back by fear of failure, judgment, and uncertainty.",
       fullDescription: "Fear is your dominant invisible force. You often find yourself paralyzed by 'what if' scenarios, playing it safe instead of taking bold steps toward your dreams. This protective mechanism, while keeping you from potential harm, also keeps you from potential breakthroughs and authentic self-expression.",
       color: "from-red-500 to-orange-500",
-      emoji: "😰"
+   
     },
     "People-Pleasing": {
       title: "People-Pleasing",
       shortDescription: "You prioritize others' comfort and approval over your own needs and desires.",
       fullDescription: "People-Pleasing is your strongest pattern. You consistently bend over backwards to keep others happy, often at the expense of your own well-being and authentic expression. While your caring nature is beautiful, this pattern can lead to resentment and a loss of your true self.",
       color: "from-pink-500 to-rose-500",
-      emoji: "🤗"
+
     },
     "Perfectionism": {
       title: "Perfectionism",
       shortDescription: "You're driven by impossible standards and never feeling 'enough'.",
       fullDescription: "Perfectionism is your primary invisible force. You set impossibly high standards for yourself and constantly move the goalpost, never allowing yourself to truly celebrate achievements. This relentless pursuit of flawlessness often leads to burnout and a chronic sense of inadequacy.",
       color: "from-purple-500 to-indigo-500",
-      emoji: "🎯"
+ 
     },
     "Inner Conflict": {
       title: "Inner Conflict",
       shortDescription: "You're caught between competing desires and can't move forward decisively.",
       fullDescription: "Inner Conflict is your dominant pattern. You experience constant internal battles between different parts of yourself, leading to indecision and self-sabotage. This internal war keeps you stuck in cycles of starting and stopping, preventing you from building real momentum in your life.",
       color: "from-yellow-500 to-amber-500",
-      emoji: "⚡"
+  
     },
     "Guilt & Shame": {
       title: "Guilt & Shame",
       shortDescription: "You feel guilty for wanting more and selfish for prioritizing yourself.",
       fullDescription: "Guilt & Shame is your strongest invisible force. You consistently sacrifice your own needs and desires, then feel resentful about it. This pattern convinces you that wanting more for yourself is selfish, keeping you trapped in cycles of self-denial and emotional exhaustion.",
       color: "from-green-500 to-teal-500",
-      emoji: "💔"
+
     },
     "Conditioning": {
       title: "Conditioning",
       shortDescription: "You follow the rules and expectations others set, even when they don't fit you.",
       fullDescription: "Conditioning is your primary invisible force. You're living according to scripts written by others - family, society, culture - rather than discovering and following your own truth. This autopilot existence feels safe but ultimately unfulfilling, as you're not living as your authentic self.",
       color: "from-blue-500 to-cyan-500",
-      emoji: "🔗"
+   
     }
   };
   
