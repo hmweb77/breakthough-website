@@ -495,7 +495,7 @@ Or you can breakthrough - into **authenticity, sovereignty, and freedom**.
                 margin-bottom: 0;
             }
             .cta-section {
-                background: #447087;
+                background: #68A1A7;
                 color: white;
                 padding: 40px 30px;
                 text-align: center;
@@ -504,7 +504,7 @@ Or you can breakthrough - into **authenticity, sovereignty, and freedom**.
             .cta-button {
                 display: inline-block;
                 background: #ffffff;
-                color: #447087;
+                color: #68A1A7;
                 padding: 15px 30px;
                 text-decoration: none;
                 border-radius: 8px;
@@ -517,11 +517,11 @@ Or you can breakthrough - into **authenticity, sovereignty, and freedom**.
             .footer {
                 text-align: center;
                 padding: 30px;
-                background: #2C2C2C;
+                background: #68A1A7;
                 color: white;
             }
             .footer p {
-                margin: 5px 0;
+               
                 font-size: 14px;
                 opacity: 0.8;
             }
@@ -552,8 +552,8 @@ Or you can breakthrough - into **authenticity, sovereignty, and freedom**.
                     padding: 15px;
                 }
                 .logo-placeholder {
-                    width: 100px;
-                    height: 50px;
+                    width: 400px;
+                    height: 20px;
                     font-size: 12px;
                 }
             }
@@ -651,7 +651,7 @@ Or you can breakthrough - into **authenticity, sovereignty, and freedom**.
             <!-- Footer -->
             <div class="footer">
                 <p><strong>Thank you for taking the "What Invisible Force Is Leading Your Life?" quiz.</strong></p>
-                <p style="margin-top: 20px; opacity: 0.6;">
+                <p style=" opacity: 0.6;">
                     © 2025 Breakthrough Methods. All rights reserved.<br>
                     You're receiving this because you completed our quiz. 
                     <a href="#" style="color: #50A7AC;">Unsubscribe</a> | 
