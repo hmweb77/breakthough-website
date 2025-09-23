@@ -125,8 +125,7 @@ Notice what comes up as you read these. The tightness. The looping thoughts. The
       yourmove: `Fear is not who you are. It's just the invisible force that's been steering you.
 The question is, **how much longer will you let it?**
 You can keep spinning your wheels while opportunities slip by.
-Or you can break through - into the **leadership, impact, and freedom** you already know you're capable of.
-**What has fear already taken from you? When is now a good time to take it all back?**`,
+Or you can break through - into the **leadership, impact, and freedom** you already know you're capable of.`,
       method: "Freedom Method"
     },
     "People-Pleasing": {
@@ -172,8 +171,7 @@ Notice the tightness, the growing resentment, the weight in your chest.
       yourmove: `People-pleasing is not who you are. It's the survival pattern that once protected you - that now causes you to abandon yourself and your truth. 
 The question is: **how much longer will you let it?**
 You can keep saying yes when you mean no - quietly abandoning yourself.
-Or you can breakthrough - into **authenticity, alignment, self-respect and true belonging**.
-**What has people pleasing already cost you? When is now a good time to take it all back?**`,
+Or you can breakthrough - into **authenticity, alignment, self-respect and true belonging**.`,
       method: "Parts Integration Method"
     },
     "Perfectionism": {
@@ -216,8 +214,7 @@ That pressure isn't you. **That's the invisible force of perfectionism, running 
       yourmove: `Perfectionism is not who you are. It's just the invisible force steering you.
 The question is: **how much longer will you let it?**
 You can keep burning out on the treadmill of "not enough."
-Or you can break through - into **authenticity, ease, and real measurable impact**.
-**What has perfectionism already cost you? When is now a good time to take it all back?**`,
+Or you can break through - into **authenticity, ease, and real measurable impact**.`,
       method: "Freedom Method"
     },
     "Inner Conflict": {
@@ -258,8 +255,7 @@ That's not confusion. **That's inner conflict.**
       yourmove: `Inner conflict is not who you are. It's just the invisible force steering you.
 The question is: **how much longer will you let it?**
 You can keep circling in stop-start cycles, drained by indecision.
-Or you can breakthrough - into **clarity, alignment, and sustainable momentum**.
-**What has inner conflict already cost you? When is now a good time to take it all back?**`,
+Or you can breakthrough - into **clarity, alignment, and sustainable momentum**.`,
       method: "Parts Integration Method"
     },
     "Guilt & Shame": {
@@ -300,8 +296,7 @@ Hiding and playing small isn't you. **It's the invisible force of guilt and sham
       yourmove: `Guilt and shame are not who you are. They're the invisible forces that once protected you - but now keep you small.
 The question is: **how much longer will you let them?**
 You can keep dimming your light to avoid guilt.
-Or you can breakthrough - into **freedom, expansion, and unapologetic self-expression**.
-**What has guilt and shame already cost you? When is now a good time to claim it all back?**`,
+Or you can breakthrough - into **freedom, expansion, and unapologetic self-expression**.`,
       method: "Freedom Method"
     },
     "Conditioning": {
@@ -344,8 +339,7 @@ The unfulfillment isn't who you are.
       yourmove: `Conditioning is not who you are. It's just the invisible force steering you.
 The question is: **how much longer will you let it?**
 You can keep living by the conditioning - safe and secure, but disconnected.
-Or you can breakthrough - into **authenticity, sovereignty, and freedom**.
-**What has conditioning already cost you - and when is now a good time to claim it all back?**`,
+Or you can breakthrough - into **authenticity, sovereignty, and freedom**.`,
       method: "Freedom Method"
     }
   };
@@ -406,16 +400,13 @@ Or you can breakthrough - into **authenticity, sovereignty, and freedom**.
                 text-align: center;
             }
             .logo-placeholder {
-                width: 120px;
-                height: 60px;
-                background-color: rgba(255,255,255,0.2);
-                border: 2px dashed rgba(255,255,255,0.5);
-                border-radius: 8px;
+                width: 200px;
+                height: 100px;
                 margin: 0 auto 20px auto;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 14px;
+         
                 color: rgba(255,255,255,0.8);
             }
             .header h1 {
@@ -448,7 +439,7 @@ Or you can breakthrough - into **authenticity, sovereignty, and freedom**.
                 font-style: italic;
             }
             .content-section {
-                padding: 30px;
+                padding: 10px;
             }
             .section-title {
                 font-size: 24px;
@@ -504,7 +495,7 @@ Or you can breakthrough - into **authenticity, sovereignty, and freedom**.
             .cta-button {
                 display: inline-block;
                 background: #ffffff;
-                color: #000000;
+                color: black;
                 padding: 15px 30px;
                 text-decoration: none;
                 border-radius: 8px;
@@ -543,7 +534,7 @@ Or you can breakthrough - into **authenticity, sovereignty, and freedom**.
                     border-radius: 8px;
                 }
                 .header, .content-section, .cta-section {
-                    padding: 20px;
+                    padding: 10px;
                 }
                 .result-title {
                     font-size: 24px;
@@ -650,10 +641,8 @@ Or you can breakthrough - into **authenticity, sovereignty, and freedom**.
 
             <!-- Footer -->
             <div class="footer">
-                <p><strong>Thank you for taking the "What Invisible Force Is Leading Your Life?" quiz.</strong></p>
                 <p style=" opacity: 0.6;">
                     © 2025 Breakthrough Methods. All rights reserved.<br>
-                    You're receiving this because you completed our quiz. 
                     <a href="#" style="color: #000000;">Unsubscribe</a> | 
                     <a href="#" style="color: #000000;">Privacy Policy</a>
                 </p>
