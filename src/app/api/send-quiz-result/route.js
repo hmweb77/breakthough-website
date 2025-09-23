@@ -499,18 +499,18 @@ Or you can breakthrough - into **authenticity, sovereignty, and freedom**.
                 color: white;
                 padding: 40px 30px;
                 text-align: center;
-                margin: 30px 0 0 0;
+             
             }
             .cta-button {
                 display: inline-block;
                 background: #ffffff;
-                color: #68A1A7;
+                color: #000000;
                 padding: 15px 30px;
                 text-decoration: none;
                 border-radius: 8px;
                 font-weight: bold;
                 font-size: 18px;
-                margin: 10px 0;
+              
                 box-shadow: 0 4px 15px rgba(0,0,0,0.2);
                 transition: all 0.3s ease;
             }
@@ -642,10 +642,10 @@ Or you can breakthrough - into **authenticity, sovereignty, and freedom**.
 
             <!-- CTA Section -->
             <div class="cta-section">
-                <h3 style="font-size: 28px; margin-bottom: 15px;">What has ${description.title.toLowerCase()} already taken from you 
-                <br/> when is now a good time to claim it all back?</h3>
+                <h3 style="font-size: 28px; margin-bottom: 15px;">What has ${description.title.toLowerCase()} already taken from you ?
+                <br/> when is now a good time to claim it all back ?</h3>
                 
-                <a href="https://tidycal.com/breakthroughmethods/breakthrough-session" class="cta-button">Book Your Breakthrough Session</a>
+                <a href="https://tidycal.com/breakthroughmethods/breakthrough-session" class="cta-button text-black">Book Your Breakthrough Session</a>
             </div>
 
             <!-- Footer -->
@@ -654,8 +654,8 @@ Or you can breakthrough - into **authenticity, sovereignty, and freedom**.
                 <p style=" opacity: 0.6;">
                     © 2025 Breakthrough Methods. All rights reserved.<br>
                     You're receiving this because you completed our quiz. 
-                    <a href="#" style="color: #50A7AC;">Unsubscribe</a> | 
-                    <a href="#" style="color: #50A7AC;">Privacy Policy</a>
+                    <a href="#" style="color: #000000;">Unsubscribe</a> | 
+                    <a href="#" style="color: #000000;">Privacy Policy</a>
                 </p>
             </div>
         </div>
