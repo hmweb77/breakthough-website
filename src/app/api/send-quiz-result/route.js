@@ -539,9 +539,9 @@ This is what freedom feels like: clarity without confusion, momentum without res
           }
         
           .logo-placeholder {
-              width: 200px;
-              height: 100px;
-              margin: 20px auto;
+              width: 700px;
+              height: 300px;
+              margin: 10px auto;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -632,7 +632,7 @@ This is what freedom feels like: clarity without confusion, momentum without res
           .cta-button {
               display: inline-block;
               background: #ffffff;
-              color: #000000 !important;
+              color: #595757 !important;
               padding: 15px 30px;
               text-decoration: none;
               border-radius: 8px;
@@ -777,7 +777,7 @@ This is what freedom feels like: clarity without confusion, momentum without res
 
           <!-- CTA Section -->
           <div class="cta-section">
-              <h3 style="font-size: 28px; margin-bottom: 15px;">What has ${description.title.toLowerCase()} already taken from you?
+              <h3 style="font-size: 28px; margin-bottom: 5px;">What has ${description.title.toLowerCase()} already taken from you?
               <br/>When is now a good time to claim it all back?</h3>
               
               <a href="https://tidycal.com/breakthroughmethods/breakthrough-session" class="cta-button">Book Your Breakthrough Session to begin your reclamation</a>
