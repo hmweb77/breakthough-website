@@ -714,7 +714,7 @@ This is what freedom feels like: clarity without confusion, momentum without res
       <div class="email-container">
    <!-- Logo Placeholder -->
               <div class="logo-placeholder">
-                <img src="https://breakthough-website.vercel.app/BREAKTHROUGHMETHODS.png" alt="Logo" />
+                <img src="https://breakthough-website.vercel.app/finallogo.png" alt="Logo" />
               </div>
           <!-- Result Card -->
           <div class="result-card">

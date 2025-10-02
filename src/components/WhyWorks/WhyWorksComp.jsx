@@ -108,7 +108,7 @@ const WhyItWorksPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div  className="min-h-screen bg-white">
       {/* Hero Section */}
       <motion.section 
         className="bg-[#50A7AC] text-white py-20"
@@ -124,7 +124,8 @@ const WhyItWorksPage = () => {
             Why It Works
           </motion.h1>
           <motion.p 
-            className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed"
+           id="why"
+           className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed"
             {...fadeInUp}
             transition={{ delay: 0.2 }}
           >

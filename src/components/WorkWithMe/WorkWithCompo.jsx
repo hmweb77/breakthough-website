@@ -151,7 +151,7 @@ const WorkWithMePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div id='services' className="min-h-screen bg-white">
       {/* Hero Section */}
       <motion.section 
         className="bg-[#50A7AC] text-white py-20"

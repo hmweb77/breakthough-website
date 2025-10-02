@@ -106,7 +106,7 @@ const WhoItsForPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div id='casestudy' className="min-h-screen bg-white">
       {/* Hero Section */}
       <motion.section 
         className="bg-[#50A7AC] text-white py-20"
