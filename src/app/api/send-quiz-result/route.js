@@ -67,7 +67,7 @@ function getEmailSubject(result) {
   
   const subjectMap = {
     "Fear": "[Your Quiz Results]: Fearless on the outside. Fearful on the inside.",
-    "People-Pleasing": "[[Your Quiz Results]: It’s not kindness. It’s self-abandonment.",
+    "People-Pleasing": "[Your Quiz Results]: It’s not kindness. It’s self-abandonment.",
     "Perfectionism": "[Your Quiz Results]: Your power is authenticity. Perfection is the trap.",
     "Inner Conflict": "[Your Quiz Results]: It’s not confusion. It's inner conflict.",
     "Guilt & Shame": "[Your Quiz Results]: Freedom begins where guilt and shame end.",
