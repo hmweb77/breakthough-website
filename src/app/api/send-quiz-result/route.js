@@ -744,18 +744,17 @@ This is what freedom feels like: clarity without confusion, momentum without res
            
           }
           .cta-button {
-              display: inline-block;
-              background: #ffffff;
-              color: #8b1c2d!important;
-              padding: 15px 30px;
-              text-decoration: none;
-              border-radius: 8px;
-              font-weight: bold;
-              font-size: 18px;
-              box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-              transition: all 0.3s ease;
-              margin: 0;
-          }
+            display: inline-block;
+            background: #ffffff;
+            color: #8b1c2d !important;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 25px auto; /* Changed from 0 */
+        }
           .footer {
               text-align: center;
               padding: 30px;
@@ -809,19 +808,19 @@ This is what freedom feels like: clarity without confusion, momentum without res
                   object-fit: contain;
               }
               .cta-button {
-                  padding: 18px 25px;
-                  color:#8b1c2d;
-                  font-size: 16px;
-                  display: block;
-                  margin: 20px auto 0 auto;
-                  max-width: 90%;
-                  text-align: center;
-              }
-              .cta-section h3 {
-                  font-size: 22px !important;
-                  line-height: 1.3;
-                  margin-bottom: 25px !important;
-              }
+                padding: 18px 25px;
+                color: #8b1c2d !important;
+                font-size: 16px;
+                display: block;
+                margin: 25px auto; /* Consistent spacing */
+                max-width: 90%;
+                text-align: center;
+            }
+            .cta-section h3 {
+                font-size: 22px !important;
+                line-height: 1.3;
+                margin-bottom: 20px !important; /* Add space before button */
+            }
           }
       </style>
   </head>
