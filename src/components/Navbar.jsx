@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Who It's For", href: "#casestudy" },
+    { name: "Who It's For", href: "#whofor" },
     { name: "Why It Works", href: "#why" },
     { name: "The Process", href: "#process" },
     { name: "Work With Me", href: "#services" },
@@ -84,23 +84,35 @@ const Navbar = () => {
             </motion.div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1">
-              {navLinks.map((link, idx) => (
-                <motion.a
-                  key={idx}
-                  href={link.href}
-                  onClick={closeMenu}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="relative px-4 py-2 text-sm font-medium text-[#2C2C2C] hover:text-[#68A1A7] transition-colors duration-300 rounded-xl group"
-                >
-                  {link.name}
-                  <motion.div
-                    className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#68A1A7] to-[#447087] group-hover:w-full transition-all duration-300 rounded-full"
-                  />
-                </motion.a>
-              ))}
-            </nav>
+
+<nav className="hidden lg:flex items-center gap-1">
+  {navLinks.map((link, idx) => (
+    <motion.a
+      key={idx}
+      href={link.href}
+      onClick={(e) => {
+        // Only prevent default and handle scroll for hash links
+        if (link.href.startsWith('/#')) {
+          e.preventDefault();
+          const id = link.href.replace('/#', '');
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+        closeMenu();
+      }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="relative px-4 py-2 text-sm font-medium text-[#2C2C2C] hover:text-[#68A1A7] transition-colors duration-300 rounded-xl group"
+    >
+      {link.name}
+      <motion.div
+        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#68A1A7] to-[#447087] group-hover:w-full transition-all duration-300 rounded-full"
+      />
+    </motion.a>
+  ))}
+</nav>
 
             {/* Desktop CTA Button */}
             <motion.a
@@ -204,28 +216,38 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Navigation Links */}
-                <nav className="flex-1 px-6 py-8 space-y-2">
-                  {navLinks.map((link, idx) => (
-                    <motion.a
-                      key={idx}
-                      href={link.href}
-                      onClick={closeMenu}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: idx * 0.1, duration: 0.3 }}
-                      whileHover={{ x: 8 }}
-                      className="flex items-center gap-4 px-4 py-4 text-[#2C2C2C] hover:text-[#68A1A7] hover:bg-[#F0F1F0] rounded-xl transition-all duration-300 font-medium group"
-                    >
-                      <div className="w-2 h-2 rounded-full bg-[#B0CCC2] group-hover:bg-[#68A1A7] transition-colors duration-300" />
-                      {link.name}
-                      <ArrowRight 
-                        className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
-                        size={16} 
-                      />
-                    </motion.a>
-                  ))}
-                </nav>
-
+<nav className="flex-1 px-6 py-8 space-y-2">
+  {navLinks.map((link, idx) => (
+    <motion.a
+      key={idx}
+      href={link.href}
+      onClick={(e) => {
+        // Only prevent default and handle scroll for hash links
+        if (link.href.startsWith('/#')) {
+          e.preventDefault();
+          const id = link.href.replace('/#', '');
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+        closeMenu();
+      }}
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: idx * 0.1, duration: 0.3 }}
+      whileHover={{ x: 8 }}
+      className="flex items-center gap-4 px-4 py-4 text-[#2C2C2C] hover:text-[#68A1A7] hover:bg-[#F0F1F0] rounded-xl transition-all duration-300 font-medium group"
+    >
+      <div className="w-2 h-2 rounded-full bg-[#B0CCC2] group-hover:bg-[#68A1A7] transition-colors duration-300" />
+      {link.name}
+      <ArrowRight 
+        className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
+        size={16} 
+      />
+    </motion.a>
+  ))}
+</nav>
                 {/* Mobile CTA Button */}
                 <div className="p-6 border-t border-[#B0CCC2]/20">
                   <motion.a

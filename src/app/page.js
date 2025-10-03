@@ -18,15 +18,26 @@ export default function Home() {
       {/* <HeroSection></HeroSection> */}
       <NewHeroSection></NewHeroSection>
       <WhatAreBreakthroughMethods></WhatAreBreakthroughMethods>
-      <WhoIsItFor></WhoIsItFor>
+      <section id="whofor">
+        <WhoIsItFor></WhoIsItFor>
+      </section>
       <ClientBeforeAfter></ClientBeforeAfter>
       {/* <BreakthroughJourney></BreakthroughJourney> */}
-      <WhyItWorks></WhyItWorks>
+      <section id="why">
+        <WhyItWorks></WhyItWorks>
+      </section>
+      
     
       {/* <HowItWorks></HowItWorks> */}
-      <Process></Process>
-      <Services></Services>
-      <About></About>
+      <section id="process">
+        <Process></Process>
+      </section>
+      <section id="services">
+        <Services></Services>
+      </section>
+      <section id="about">
+        <About></About>
+      </section>
     </>
   );
 }
