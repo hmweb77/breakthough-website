@@ -14,6 +14,7 @@ async function addContactToBrevo(email, result) {
       email: email,
       attributes: {
         QUIZ_RESULT: result.description.title,
+        RESULT: result.description.title, 
         COMPLETED_DATE: new Date().toISOString(),
       },
       listIds: [parseInt(process.env.BREVO_LIST_ID)],
