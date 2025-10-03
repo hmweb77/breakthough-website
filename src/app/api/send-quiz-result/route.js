@@ -746,7 +746,7 @@ This is what freedom feels like: clarity without confusion, momentum without res
           .cta-button {
               display: inline-block;
               background: #ffffff;
-              color: #595757 !important;
+              color: #8b1c2d!important;
               padding: 15px 30px;
               text-decoration: none;
               border-radius: 8px;
@@ -810,6 +810,7 @@ This is what freedom feels like: clarity without confusion, momentum without res
               }
               .cta-button {
                   padding: 18px 25px;
+                  color:#8b1c2d;
                   font-size: 16px;
                   display: block;
                   margin: 20px auto 0 auto;
