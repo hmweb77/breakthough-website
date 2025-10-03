@@ -1,6 +1,116 @@
 // Updated route.js with dynamic email subject
 import { NextResponse } from 'next/server';
 
+// Add contact to Brevo list
+async function addContactToBrevo(email, result) {
+  const brevoResponse = await fetch('https://api.brevo.com/v3/contacts', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'api-key': process.env.BREVO_API_KEY,
+    },
+    body: JSON.stringify({
+      email: email,
+      attributes: {
+        QUIZ_RESULT: result.description.title,
+        COMPLETED_DATE: new Date().toISOString(),
+      },
+      listIds: [parseInt(process.env.BREVO_LIST_ID)],
+      updateEnabled: true,
+    }),
+  });
+
+  if (!brevoResponse.ok && brevoResponse.status !== 400) {
+    const errorData = await brevoResponse.json();
+    console.error('Brevo contact creation error:', errorData);
+  }
+}
+
+// Send notification to admin
+async function sendAdminNotification(userEmail, result) {
+  const adminEmail = process.env.ADMIN_EMAIL;
+  
+  if (!adminEmail) {
+    console.warn('ADMIN_EMAIL not set in environment variables');
+    return;
+  }
+
+  const adminHtmlContent = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Quiz Submission</title>
+    </head>
+    <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+        <div style="background-color: #68A1A7; color: white; padding: 30px; text-align: center; border-radius: 10px;">
+            <h1 style="margin: 0;">🎯 New Quiz Submission</h1>
+        </div>
+        
+        <div style="background-color: #f8f9fa; padding: 30px; margin-top: 20px; border-radius: 10px;">
+            <h2 style="color: #68A1A7; margin-top: 0;">Submission Details</h2>
+            
+            <div style="background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                <p style="margin: 0; font-size: 14px; color: #666;">Email Address:</p>
+                <p style="margin: 5px 0 0 0; font-size: 18px; font-weight: bold; color: #333;">${userEmail}</p>
+            </div>
+            
+            <div style="background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                <p style="margin: 0; font-size: 14px; color: #666;">Quiz Result:</p>
+                <p style="margin: 5px 0 0 0; font-size: 18px; font-weight: bold; color: #68A1A7;">${result.description.title}</p>
+            </div>
+            
+            <div style="background-color: white; padding: 20px; border-radius: 8px;">
+                <p style="margin: 0; font-size: 14px; color: #666;">Submission Date:</p>
+                <p style="margin: 5px 0 0 0; font-size: 16px; color: #333;">${new Date().toLocaleString()}</p>
+            </div>
+        </div>
+        
+        <div style="margin-top: 20px; padding: 20px; background-color: #f8f9fa; border-radius: 10px;">
+            <h3 style="color: #68A1A7; margin-top: 0;">Result Summary</h3>
+            <p style="color: #666; margin: 0;">${result.description.shortDescription}</p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
+            <p style="color: #999; font-size: 12px; margin: 0;">
+                This is an automated notification from your Breakthrough Methods quiz.
+            </p>
+        </div>
+    </body>
+    </html>
+  `;
+
+  const brevoResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'api-key': process.env.BREVO_API_KEY,
+    },
+    body: JSON.stringify({
+      sender: {
+        name: 'Quiz Notification System',
+        email: process.env.SENDER_EMAIL,
+      },
+      to: [
+        {
+          email: adminEmail,
+          name: 'Admin',
+        },
+      ],
+      subject: `New Quiz Submission: ${result.description.title} - ${userEmail}`,
+      htmlContent: adminHtmlContent,
+    }),
+  });
+
+  if (!brevoResponse.ok) {
+    const errorData = await brevoResponse.json();
+    console.error('Admin notification error:', errorData);
+  }
+}
+
 export async function POST(request) {
   try {
     const { email, result } = await request.json();
@@ -12,12 +122,13 @@ export async function POST(request) {
       );
     }
 
+    // 1. Add contact to Brevo list
+    await addContactToBrevo(email, result);
+
+    // 2. Send quiz results to user
     const htmlContent = generateEmailHTML(result);
-    
-    // Get the dynamic email subject based on the result
     const emailSubject = getEmailSubject(result);
 
-    // Brevo API call
     const brevoResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
       headers: {
@@ -47,8 +158,11 @@ export async function POST(request) {
       throw new Error(`Brevo API error: ${brevoResponse.status}`);
     }
 
+    // 3. Send notification to admin
+    await sendAdminNotification(email, result);
+
     return NextResponse.json(
-      { message: 'Email sent successfully' },
+      { message: 'Email sent successfully and contact added' },
       { status: 200 }
     );
 
@@ -60,7 +174,6 @@ export async function POST(request) {
     );
   }
 }
-
 // Function to get dynamic email subject based on result
 function getEmailSubject(result) {
   const { description } = result;
